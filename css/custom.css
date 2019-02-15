@@ -1,0 +1,1270 @@
+/* ---------------------------------------
+    Layout
+--------------------------------------- */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#CustomPageBody{
+    overflow: visible;
+}
+div#left{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#right{
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+#SpContent{
+    margin-bottom: 30px;
+}
+td#SpContent_Container{
+    padding: 0px;
+}
+#sp-main{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#sp-content{
+    padding: 0px 15px;
+}
+/* ---------------------------------------
+    Headers
+--------------------------------------- */
+h1, h2, h3, h4, h5, h6{
+    margin: 0px;
+}
+h1,
+#SpTitleBar{
+    display: block;
+    margin-bottom: 30px;
+    padding: 0px;
+    font-family: "Open Sans Condensed";
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #005596;
+}
+h2{
+    margin-bottom: 15px;
+    font-family: "Open Sans Condensed";
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #005596;
+}
+h3{
+    margin-bottom: 15px;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #0075b0;
+}
+h4{
+    margin-bottom: 5px;
+    font-size:16px;
+}
+h5{
+    margin-bottom: 5px;
+    font-size:16px;
+}
+h1.with-subtitle{
+    margin-bottom: 0px;
+}
+/* ---------------------------------------
+    Body Copy
+--------------------------------------- */
+body,
+#PageBody{
+    padding: 25px 0px 25px 0px;
+    margin: 0px;
+    color: #555555;
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 24px;
+    background: none;
+    background-color: #ffffff;
+}
+#PageBody{
+    margin-top: 70px !important;
+}
+p{
+    margin-bottom: 30px;
+}
+li{
+    margin-bottom: 15px;
+}
+.fine-print{
+    font-size: 10px;
+    line-height: 12px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+/* ---------------------------------------
+    Buttons
+--------------------------------------- */
+.primary-button,
+.formbutton{
+    display: inline-block;
+    border-style: solid;
+    border-width: 0px 2px 2px 0px;
+    border-color: #D26D2C !important;    
+    border-radius: 5px;
+    padding: 10px 30px !important;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Open Sans Condensed";
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #F5904F;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.primary-button:hover,
+.formbutton:hover{
+    color: #ffffff !important;
+    background-color: #0075b0 !important;
+    border-color: #0075b0 !important;
+}
+.secondary-button{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px; 
+    padding: 10px 25px;
+    border-color: #F5904F !important;
+    padding: 10px 25px !important;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed";
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #F5904F !important;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.secondary-button:hover{
+    color: #0075b0 !important;
+    border-color: #0075b0 !important;
+}
+/* Form Buttons */
+#formpage_saveLnk{
+    color: #ffffff;
+}
+#formpage_saveLnk a{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px; 
+    border-color: #f47d30;
+    padding: 10px 25px;
+    color: #f47d30;
+}
+#formpage_saveLnk a:hover{
+    border-color: #0075b0;
+    color: #0075b0;
+}#formpage_prev{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px; 
+    border-color: #f47d30;
+    padding: 10px 25px;
+    color: #f47d30;
+}
+#formpage_prev a{
+    color: #f47d30;
+}
+#formpage_prev:hover{
+    border-color: #0075b0;
+    color: #ffffff;
+    background-color: #0075b0;
+}
+#formpage_prev:hover a{
+    color: #ffffff;
+}
+#formpage_prev a:hover{
+    color: #ffffff;
+}
+#formpage_next::after{
+    display: none;
+    content: "NEXT >>";    
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    width: auto;
+    font-size: 16px;
+    background-color: #d0d0d0;
+    transition: all 250ms ease-in 0s;
+    height: auto;
+    line-height: 18px;
+    cursor: default;
+}
+.zone-content-calendar .irailcontent{
+    min-height:218px;
+    max-height:218px;
+ } 
+.hp-btn{
+    background: #003465 none repeat scroll 0 0;
+}
+.pageLink-link{
+    font-size: 14px !important;
+}
+/* ---------------------------------------
+    Forms
+--------------------------------------- */
+.CustomFormTable{
+    color: #555555;
+}
+.CustomFormTable tr{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.CustomFormTable th,
+.CustomFormTable td{
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], select, textarea{
+    display: block;
+    width: 100% !important;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0d0d0;
+    border-radius: 3px;
+    padding: 10px 15px;
+    line-height: 24px;
+    background-color: #ffffff;
+    color: #555555;
+}
+.infobox{
+    border-color: #d0d0d0;
+    color: #777777;
+    background-color: #efefef;
+}
+.CustomFormTable label{
+    width: 100% !important;
+    font-weight: normal;
+    color: #777777;
+}
+.CustomFormTable input[type="text"],
+.CustomFormTable select,
+.CustomFormTable textarea{
+    width: 100%;
+    max-width: 500px;
+    height: 44px;
+    line-height: 24px;
+    border-color: #d0d0d0;
+    border-radius: 3px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    outline: none;
+    outline-color: transparent;
+    outline-style: none;
+    -webkit-appearance:none;
+}
+.CustomFormTable input[type="text"]:focus,
+.CustomFormTable select:focus,
+.CustomFormTable textarea:focus{
+    border-color: #0075b0;
+    color: #0075b0;
+    outline: none;
+    outline-color: transparent;
+    outline-style: none;
+    -webkit-appearance:none;
+}
+.CustomFormTable input[type="text"]{
+    width: 100% !important;
+}
+.CustomFormTable select option{
+    padding: 5px 0px;
+}
+.CustomFormTable input[type="checkbox"],
+.CustomFormTable input[type="radio"]{
+    display: inline-block;
+    width: auto;
+}
+.CustomFormTable input[type="checkbox"] + label,
+.CustomFormTable input[type="radio"] + label{
+    display: inline-block;
+    width: auto !important;
+    font-weight: normal;
+}
+/* ---------------------------------------
+    Form Pagination
+--------------------------------------- */
+#CustomFormPager div,
+#CustomFormPager .current,
+#CustomFormPager .invalid{
+    width: 150px;
+    height: 30px;
+    position: relative;
+    margin-left: 45px;
+    line-height: 22px;
+    border-style:  none;
+    text-align: left;
+    color: #d0d0d0;
+    background-color: #ffffff;
+}
+#CustomFormPager div{
+    color: #d0d0d0;
+}
+#CustomFormPager .current{
+    color: #0075b0;
+}
+#CustomFormPager .current a{
+    background-color: #0075b0;
+    border-color: #0075b0;
+    color: #ffffff;
+}
+#CustomFormPager .current::after{
+    color: #0075b0;
+}
+#CustomFormPager .invalid{
+    color: #f47d30;
+}
+#CustomFormPager .invalid a{
+    background-color: #f47d30;
+    border-color: #f47d30;
+    color: #ffffff;
+}
+#CustomFormPager .invalid::after{
+    color: #f47d30;
+}
+#CustomFormPager .valid{
+    color: #b7bf34;
+    background-color: #ffffff;
+}
+#CustomFormPager .valid a{
+    background-color: #b7bf34;
+    border-color: #b7bf34;
+    color: #ffffff;
+}
+#CustomFormPager .valid::after{
+    color: #b7bf34;
+}
+#CustomFormPager div a{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border-style:  solid;
+    border-width: 1px;
+    border-color: #d0d0d0;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: #d0d0d0;
+}
+/* ---------------------------------------
+    Icons
+--------------------------------------- */
+.icon{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #6fd4e4;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+.icon img{
+    display: inline;
+    width: 25px;
+    margin-top: -4px;
+}
+/* ---------------------------------------
+    Top Menu
+--------------------------------------- */
+.toolbar-out{
+    background-color: #6FD4E4;
+    border-bottom: none;
+}
+#itoolbar{
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 0px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+#itoolbar_bg{
+    min-height: 32px;
+}
+/* TEMPORARY: Hide "Join" and "Print Page" until we have YM change */
+#itoolbar a:first-child,
+#itoolbar a:nth-child(2){
+    display: none;
+}
+/* TEMPORARY: add border to last item until we have YM change links so we can remove the hiding line above */
+#itoolbar a:last-child{
+    margin-left: 15px;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    padding-left: 15px;
+}
+#itoolbar a{
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+#itoolbar a:hover{
+    color: #0075b0;
+}
+#isearch .input-group{
+    margin-top: 3px;
+    border: none;
+    border-radius: 3px;
+}
+#isearch .btn{
+    color: #777777;
+}
+/* ---------------------------------------
+    Header 
+--------------------------------------- */
+#header{
+    height: 68px;
+}
+.header-out{
+    top: 33px;
+    box-shadow: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #979797;
+    background-color: #ffffff !important;
+}
+#logo{
+    display: block;
+    width: 100px;
+    height: 103px;
+    top: -34px;
+    background-color: #005596;
+    background-image: url("https://www.acbsp.org/resource/resmgr/images/logo/acbsp-logo.svg");
+    background-repeat: none;
+    background-position: center center;
+}
+#logo img{
+    display: none;
+}
+#logo:after{
+	content: "";
+	display: block;
+	width: 0; 
+	height: 0; 
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 20px solid #005596;
+	position: absolute;
+	top: 103px;
+}
+/* ---------------------------------------
+    Primary Navigation
+--------------------------------------- */
+.navbar-left{
+    margin-top: -93px;
+}
+.navbar-toggle{
+    margin-top: -114px;
+}
+.navbar-nav li{
+    margin-bottom: 0px;
+}
+.navbar-nav li a{
+    font-family: "Open Sans Condensed";
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #005596;
+}
+.navbar-nav>li:nth-child(5) a:after{
+   display: none !important;
+}
+.navbar-nav li a[href="/page/join"]{
+	border-style: none;
+	border-radius: 5px;
+    padding: 0px 30px;
+    color: #ffffff;
+    background-color: #f47d30;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.navbar-nav>li:last-child a:hover{
+    background-color: #0075b0;
+}
+.dropdown-menu{
+    padding: 0px;
+    background-color: #f2f2f2;
+    box-shadow: none
+}
+.dropdown-menu>li>a{
+    margin: 0px;
+    font-family: "Open Sans";
+    border: none !important;
+    padding: 5px 10px !important;
+    line-height: 24px !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    text-transform: capitalize;
+    color: #007481 !important;
+}
+/* ---------------------------------------
+    Sidebar
+--------------------------------------- */
+#left{
+    width: 100%;
+}
+#right{
+    display: none;
+}
+.subnav-sidebar{
+    margin-bottom: 15px;
+}
+.subnav-sidebar a{
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 0px 10px 0px 10px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4C9EC7;
+}
+.subnav-sidebar a:hover,
+.subnav-sidebar a.current{
+    background-color: #0075b0;
+}
+/* ---------------------------------------
+    Corporate Members
+--------------------------------------- */
+.bottomcontentarea-out{
+    box-shadow: none !important;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #6FD4E4;
+    background-color: #ffffff;
+}
+.bottomcontentarea-out .container{
+    padding: 0px !important;
+}
+#bottomcontentarea{
+    background-color: rgba(111,212,228,0.10);
+}
+#sponsors{
+    max-width: 1100px;
+    margin: 30px auto;
+}
+#sponsors h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cor_part_slider {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.cor_part_slider li {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    height: 50px;
+    margin-bottom: 25px;
+
+}
+.cor_part_slider li.display_slide {
+    display: inline-block;
+}
+.cor_part_slider li a{
+    display: inline-block;
+    text-align: center;
+    padding: 0px 40px;
+    max-width: 100%;
+    max-height: 100% !important;
+}
+.cor_part_slider li img{
+    text-align: center;
+    display: inline-block;
+    max-height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+.clear{
+    clear: both;
+}
+/* ---------------------------------------
+    CTA
+--------------------------------------- */
+#footer-cta{
+    margin-top: 50px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #6fd4e4;
+    padding: 50px 0px 25px 0px;
+    text-align: left;
+}
+#footer-cta.homepage{
+    margin: 0 auto;
+    padding: 50px 15% 25px 15%;
+    text-align: center;
+}
+#footer-cta .secondary-button{
+    width: 200px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+}
+#footer-cta .primary-button{
+    width: 200px;
+    margin-bottom: 25px;
+}
+/* ---------------------------------------
+    Footer 
+--------------------------------------- */
+#FooterContentArea{
+    border: none;
+    background-color: #005596;
+}
+#icopyright{
+    display: none;
+}
+.footer-link-column{
+    margin-bottom: 50px;
+}
+.footer-link-column h3{
+    margin-bottom: 30px;
+    font-family: "Open Sans Condensed";
+    font-size: 16px;
+    color: #ffffff;
+}
+.footer-link-column a{
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+}
+.footer-link-column a:hover,
+#footer a:hover{
+    color: #6fd4e4;
+}
+#footer-bottom-row{
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    padding-bottom: 30px;
+}
+#acbsp-copyright{
+    float: left;
+    margin-top: 20px;
+    font-size: 10px;
+}
+.foot-social{
+    float: right;
+    margin-top: 10px;
+}
+/* ---------------------------------------
+    Homepage
+--------------------------------------- */
+/* Hide Undesired Sections */
+.hp-left-out,
+#hp-main .bottom-left-out .news,
+#hp-main .bottom-left-out .calendar{
+    display: none;
+}
+.hp-center-out{
+    padding: 0px;
+}
+.hp-center-out .container{
+    width: 100%;
+}
+#homepage-feature-image{
+    height: 600px;
+    position: relative;
+    background-image: url("https://www.acbsp.org/resource/resmgr/images/homepage-images/feature-image-v02.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+#feature-text{
+    width: 45%;
+    min-width: 550px;
+    position: absolute;
+    right: 0px;
+    top: 70px;
+}
+.feature-headline{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: "Open Sans Condensed";
+    font-weight: bold;
+    color: #ffffff;
+    padding: 20px 20px;
+    background-color: rgb(0,117,176,0.85);
+}
+#feature-text .primary-button{
+    margin-top: 20px;
+    color: #ffffff;
+}
+.homepage-section{
+    padding: 50px 0px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #6fd4e4;
+}
+.homepage-section .text-content{
+    padding: 0px 30px 0px 30px;
+}
+.homepage-section img{
+    max-width: 100%;
+}
+#value-propositions{
+    border-top-style: none;
+}
+.value-proposition{
+    text-align: center;
+}
+.value-proposition .icon{
+    margin: 0px auto 15px auto;
+}
+.value-proposition h2{
+    margin-bottom: 15px;
+    font-family: "Open Sans Condensed";
+    font-size: 24px;
+    text-align: center;
+    color: #005596;
+}
+.value-proposition p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-image{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.events-homepage-section{
+    padding: 50px 0px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #6fd4e4;
+}
+.events-homepage-section a:hover{
+    opacity: 0.5;
+}
+.events-homepage-section h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.event-listing{
+    position: relative;
+    padding: 0px;
+}
+.event-listing img{
+    width: 100%;
+}
+.event-details{
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    padding: 15px;
+    color: #ffffff;
+    background-color: rgba(0,117,176,0.85);
+}
+.event-name{
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+}
+.event-date{
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* ---------------------------------------
+    Member Dashboard
+--------------------------------------- */
+#member-dashboard .member-dashboard-module{
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 10px;
+    padding: 30px;
+    background-color: rgba(111,212,228,0.1);
+}
+.member-dashboard-news-article,
+.member-dashboard-event-calendar-entry{
+    display: block;
+    margin-bottom: 30px;
+}
+.event-calendar-entry-title,
+.news-article-headline{
+    display: block;
+    font-weight: bold;
+}
+.news-article-date,
+.event-calendar-entry-date{
+    display: block;
+    font-size: 12px;
+}
+.small-link{
+    display: inline-block;
+    font-weight: bold;
+}
+/* ---------------------------------------
+    Contact
+--------------------------------------- */
+.additional-contact-information{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6fd4e4;
+    padding: 20px;
+    background-color: #F0FAFC;
+}
+.additional-contact-section{
+    margin-bottom: 30px;
+}
+.additional-contact-section h3{
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.contact-item{
+    margin-bottom: 15px;
+}
+.contact-title{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+.contact-detail{
+    font-size: 14px;
+    line-height: 18px;
+}
+/* ---------------------------------------
+    Member Sign-In
+--------------------------------------- */
+form[action="https://www.acbsp.org/login.aspx?returl="] #SpTitleBar{
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #SpContent_Container{
+    width: 100%;
+    padding: 0px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #ctl00_PageContent_MainLogin{
+    width: 30%;
+    text-align: center;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #RegSocial{
+    text-align: center;
+    padding-bottom: 25px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #RegSocial b:first-child{
+    display: none;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] .reg-social a,
+form[action="https://www.acbsp.org/login.aspx?returl="] .reg-social a.btn-connect.facebook, 
+form[action="https://www.acbsp.org/login.aspx?returl="] .reg-social a.btn-connect.linkedin{
+    width: 100%;
+    max-width: 100% !important;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] .or-option{
+    display: none;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #LogSocial{
+    text-align: center;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #LogSocial table{
+    width: 100%;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #LogSocial b:first-child{
+    text-align: center;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] .FormTable1{
+    margin-top: 20px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] input[type="text"],
+form[action="https://www.acbsp.org/login.aspx?returl="] input[type="password"]{
+    width: 100%;
+    height: 45px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #LogSocial .FormTable1 tr td{
+    padding-top: 0px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] input[type="checkbox"] + label{
+    font-weight: normal;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #LogSocial p{
+    text-align: center;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] .formbutton{
+    min-width: 200px;
+}
+.calloutbox, 
+.infobox{
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+.calloutbox a, 
+.infobox a{
+    color: #0075b0;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] #LogSocial .calloutbox{
+    padding: 10px 0px 0px 0px;
+    line-height: 6px;
+    color: #ffffff;
+    background: none;
+}
+#LogSocial .calloutbox p{
+    height: 0px;
+    margin-bottom: 15px;
+}
+#LogSocial p{
+    margin-bottom: 0px;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] .calloutbox br{
+    display: none;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] .calloutbox a{
+    display: block;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/email_pass.asp"]:after{
+    content: "Forgot Password?";
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/email_pass.asp"] b{
+    display: none;
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/register_start.asp"]:after{
+    content: "Register for an Account.";
+}
+form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/register_start.asp"] b{
+    display: none;
+}
+/* ---------------------------------------
+    FAQ
+--------------------------------------- */
+.faq-section h2{
+    padding: 20px 0px 30px 0px;
+}
+.faq-item{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #d0d0d0;
+    margin-bottom: 30px;
+}
+.faq-question{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.faq-answer{
+    padding-left: 15px;
+}
+/* ---------------------------------------
+    Misc.
+--------------------------------------- */
+.zone-content-calendar .irailcontent{
+    min-height:218px;
+    max-height:218px;
+}
+/* ---------------------------------------
+    Desktop
+--------------------------------------- */
+@media only screen and (min-width: 767px){  
+    /* Layout */
+    #sidebar{
+        width: 33%;
+        max-width: 265px;
+        float: left;
+        margin-bottom: 50px;
+    }
+    #content-sidebar-page{
+        width: 67%;
+        float: left;
+        padding: 0% 0% 0% 3%;
+    }
+    .subnav-sidebar a{
+        position: relative;
+        height: 40px;
+        padding: 0px 10px 0px 20px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .subnav-sidebar a:hover:after,
+    .subnav-sidebar a.current:after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: -10px;
+        border-style: solid;
+        border-color: #0075B0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 10px solid #0075B0;
+        border-right: 0px;
+    }
+    /* Member Sign-In */
+    #ctl00_PageContent_PageSummary{
+        width: 60%;
+        float: left;
+    }
+    #ctl00_PageContent_SpacerPanel{
+        display: none;
+    }
+    #ctl00_PageContent_MainLogin{
+        width: 30%;
+        float: right;
+    }
+}
+/* ---------------------------------------
+    Mobile
+--------------------------------------- */
+
+@media only screen and (max-width: 767px){
+    /* Body */
+    body,
+    #PageBody{
+        margin-top: 50px !important;
+        padding-top: 0px;
+    }
+    /* Buttons */
+    #footer-cta{
+        display: block;
+        width: 100%;
+    }
+    #footer-cta.homepage{
+        display: block;
+        width: 100%;
+    }
+    #footer-cta .secondary-button{
+        display: block;
+        width: 100%;
+    }
+    #footer-cta .primary-button{
+        display: block;
+        width: 100%;
+    }
+    .formbutton{
+        display: block;
+        width: 100%;
+    }
+    /* Toolbar */
+    .toolbar-out{
+        height: 0px;
+        width: 150px;
+        top: 1px;
+        right: 75px;
+        z-index: 22;
+    }
+    #itoolbar_bg{
+        height: 0px;
+        padding: 0px;
+    }
+    #itoolbar{    
+        position: relative;
+        height: 0px;
+    }
+    #itoolbar a{
+        display: none;
+    }
+    #itoolbar a[href="/login.aspx"],
+    #itoolbar a[href="/Logout.aspx"]{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: block;
+        color: #555555;
+        border: none;
+    }
+    /* Header */
+    .header-out{
+        width: 70px;
+        top: 0px;
+        z-index: 21;
+    }
+    #header{
+        height: 50px;
+    }
+    #logo{
+        top: 0px;
+        width: 55px;
+        height: 50px;
+    }
+    #logo:after{
+        border-left: 28px solid transparent;
+        border-right: 28px solid transparent;
+        border-top: 10px solid #005596;
+        top: 50px;
+    }
+    /* Main Navigation */
+    .mainmenu-out{
+        top: 0px;
+        height: 50px;
+    }
+    .mainmenu-out .container{
+        padding: 0px
+    }
+    .navbar-header{
+        height: 51px;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #979797;
+        background-color: #ffffff;
+    }
+    .navbar-nav li a{
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #d0d0d0;
+    }
+    .navbar-nav li a[href="/page/join"]{
+        padding: 0px 30px;
+        text-align: center;
+        line-height: 40px;
+        margin: 10px 15px 20px 15px;
+    }
+    .navbar-nav .open .dropdown-menu > li > a{
+        padding-left: 25px !important;
+        border-bottom-style: solid !important;
+        border-width: 1px !important;
+        border-color: #d0d0d0 !important;
+        background-color: #F0FAFC !important;
+        color: #007481 !important;
+    }
+    .navbar-toggle{
+        height: 50px;
+        margin-top: 0px;
+        margin-right: 0px;
+        padding: 0px 15px;
+        background-color: #ffffff;
+    }
+    .navbar-toggle .icon-bar{
+        background-color: #0075b0;
+    }
+    .navbar-collapse{
+        top: 0px;
+        width: 100%;
+        margin-right: 0px !important;
+        background-color: #F2F2F2 !important;
+    }
+    .navbar-collapse.in{
+        overflow-y: visible;
+    }
+    /* CTA */
+    #footer-cta .secondary-button{
+        margin-right: 0px;
+    }
+    /* Footer */
+    .footer-link-column h3,
+    .footer-link-column a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #acbsp-copyright{
+        float: none;
+        padding: 0px 30px 15px 0px;
+        text-align: center;
+    }
+    .foot-social{
+        float: none;
+        text-align: center;
+    }
+    /* Sidebar Navigation */
+    .subnav-sidebar a:after{
+        content: "";
+        display: block;
+        height: 14px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 5px solid #ffffff;
+    }
+    /* Homepage - Feature Image */
+    .hp-center-out .container{
+        padding: 0px;
+    }
+    #homepage-feature-image{
+        height: 600px;
+        background-image: url("https://www.acbsp.org/resource/resmgr/images/homepage-images/feature-image.jpg");
+        background-position: top center;
+    }
+    #feature-text{
+        width: 90%;
+        min-width: 0px;
+        position: absolute;
+        right: 0px;
+        top: 210px;
+    }
+    .feature-headline{
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-family: "Open Sans Condensed";
+        font-weight: bold;
+        color: #ffffff;
+        padding: 10px 20px;
+        background-color: rgb(0,117,176,0.85);
+    }
+    /* Homepage Content */
+    .homepage-section .secondary-button{
+        width: 100%;
+    }
+    /* Member Sign-In */
+    form[action="https://www.acbsp.org/login.aspx?returl="] #SpTitleBar{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    form[action="https://www.acbsp.org/login.aspx?returl="] #ctl00_PageContent_MainLogin{
+        width: 100%;
+    }
+    form[action="https://www.acbsp.org/login.aspx?returl="] #ctl00_PageContent_PageSummary{
+        display: none;
+    }
+    form[action="https://www.acbsp.org/login.aspx?returl="] #ctl00_PageContent_SpacerPanel{
+        display: none;
+    }
+}
+/* ---------------------------------------
+    Large Screens
+--------------------------------------- */
+@media (min-width: 1659px){
+    .pageLink{
+        width: 181px;
+    }
+    .pageLinks .pageLinks-inner td{
+        border-left: 0px solid #fff;
+    }
+}

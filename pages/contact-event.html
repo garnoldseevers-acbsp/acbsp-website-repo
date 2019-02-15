@@ -1,0 +1,130 @@
+<style type="text/css">
+    #SpSubHead{
+        display: none;
+    }
+    #sp-main{
+        padding-top: 0px;
+    }
+    @media only screen and (min-width: 767px){
+        #CustomFormForm{
+            float: left;
+            width: 67% !important;
+            padding-left: 3%;
+        }
+        #sp-main{
+            padding-top: 30px;
+        }
+    }
+</style>
+<div id="sidebar">
+    <div class="subnav-sidebar">
+        <a href="/page/contact-general">General Questions</a>
+        <a href="/page/contact-membership">Membership Questions</a>
+        <a href="/page/contact-accreditation">Accreditation Questions</a>
+        <a href="/page/contact-event" class="current">Event Questions</a>
+    </div><!-- /.subnav-sidebar -->
+    <div class="additional-contact-information">
+        <div class="additional-contact-section">
+            <h3>
+                Contact us by Phone
+            </h3>
+            <div class="contact-item">
+                <div class="contact-title">
+                    U.S. World Headquarters
+                </div>
+                <div class="contact-detail">
+                    (913) 339-9356
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    European Office
+                </div>
+                <div class="contact-detail">
+                    +32 274124 26
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    Latin American Office
+                </div>
+                <div class="contact-detail">
+                    +51 999963742
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    China Office
+                </div>
+                <div class="contact-detail">
+                    +86-10-62568532/33
+                </div>
+            </div><!-- .contact-item -->
+        </div><!-- /.additional-contact-section -->
+        <div class="additional-contact-section">
+            <h3>
+                Contact us by Mail
+            </h3>
+            <div class="contact-item">
+                <div class="contact-title">
+                    U.S. World Headquarters
+                </div>
+                <div class="contact-detail">
+                    11520 West 119th Street<br/>
+                    Overland Park, KS 66213
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    European Office
+                </div>
+                <div class="contact-detail">
+                    Rue Abbé Cuypers, 3<br/>
+                    Brussels, 1040, Belgium
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    Latin American Office
+                </div>
+                <div class="contact-detail">
+                    1 Jr. Las Calandrias 151 -291<br/>
+                    Santa Anita – Lima 43 - Perú
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    China Office
+                </div>
+                <div class="contact-detail">
+                </div>
+            </div><!-- .contact-item -->
+        </div><!-- /.additional-contact-section -->
+        <div class="additional-contact-section">
+            <a href="https://www.acbsp.org/page/departments">List of Staff &amp; Departments</a>
+        </div><!-- /.additional-contact-section -->
+    </div><!-- /.additional-contact-information -->
+</div><!-- /#contact-sidebar-->
+<div id="content-sidebar-page">
+    <h1 class="with-subtitle">
+        Contact Us
+    </h1>
+    <h3 class="subtitle">
+        Event Questions
+    </h3>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        move_contact_info();
+    });
+    window.onresize = function(){
+        move_contact_info();
+    }
+    function move_contact_info(){
+        if(window.innerWidth <= 767){
+            $(".additional-contact-information").appendTo("#sp-content");
+        }else{
+            $(".additional-contact-information").appendTo("#sidebar");
+        }
+    }
+</script>
