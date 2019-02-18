@@ -120,11 +120,6 @@
                         </a>
                     </li>
                     <li class="col-lg-6 col-md-12 col-sm-12">
-                        <a href="http://skyfactor.com/" target="_blank" rel="noopener">
-                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/skyfactor.png" alt="Skyfactor">
-                        </a>
-                    </li>
-                    <li class="col-lg-6 col-md-12 col-sm-12">
                         <a href="http://www.unprme.org/" target="_blank" rel="noopener">
                             <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/PRME.jpg" alt="PRME - Principles for Responsible Management Education">
                         </a>
@@ -177,8 +172,8 @@
             for(i=0; i < slides_left; i ++){
                 $("li:nth-child(" + (current_slide + i) + ")").addClass("display_slide");
             }
-            // update current slide count
-            current_slide += number_of_slides_to_show;
+            // reset current slide to the beginning
+            current_slide = 1;
             // advance to the next slide after the provided pause duration
             var pause_carousel = setTimeout(advance_slide, pause_duration);
         // if  there are enough slides, display normal state
