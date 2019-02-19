@@ -155,6 +155,10 @@ li{
     color: #0075b0 !important;
     border-color: #0075b0 !important;
 }
+.small-link{
+    display: block;
+    margin-bottom: 30px;
+}
 a:hover,
 .small-link:hover,
 .small-link:hover:after{
