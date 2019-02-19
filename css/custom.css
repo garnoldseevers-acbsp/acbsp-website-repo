@@ -917,6 +917,36 @@ input[type="radio"] + label{
     line-height: 18px;
 }
 /* ---------------------------------------
+    About
+--------------------------------------- */
+.milestone{
+    display: block;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #6fd4e4;
+    padding: 30px 0px;
+    clear: both;
+}
+.milestone:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.milestone-year{
+    display: block;
+    width: 15%;
+    float: left;
+    font-family: "Open Sans Condensed";
+    font-size: 30px;
+    font-weight: bold;
+    color: #f47d30;
+}
+.milestone-description{
+    display: block;
+    width: 83%;
+    float: right;
+}
+/* ---------------------------------------
     Events
 --------------------------------------- */
 .acbsp-event{
