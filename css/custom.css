@@ -919,6 +919,7 @@ input[type="radio"] + label{
 /* ---------------------------------------
     About
 --------------------------------------- */
+/* History */
 .milestone{
     display: block;
     border-top-style: solid;
@@ -945,6 +946,58 @@ input[type="radio"] + label{
     display: block;
     width: 83%;
     float: right;
+}
+/* Regions */
+.region-list{
+    padding-top: 30px;
+}
+.region-list-item{
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+.region-list-item:before{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    background-color: #0075b0;
+}
+#region-one:before{
+    background-color: #f47d30;
+}
+#region-two:before{
+    background-color: #007481;
+}
+#region-three:before{
+    background-color: #fecb00;
+}
+#region-four:before{
+    background-color: #6fd4e4;
+}
+#region-five:before{
+    background-color: #b7bf34;
+}
+#region-six:before{
+    background-color: #993921;
+}
+#region-seven:before{
+    background-color: #6c3b5d;
+}
+#region-eight:before{
+    background-color: #005596;
+}
+#region-nine:before{
+    background-color: #9f9857;
+}
+#region-ten:before{
+    background-color: #cd8c2a;
+}
+#region-eleven:before{
+    background-color: #9ab6d3;
 }
 /* ---------------------------------------
     Events
