@@ -999,6 +999,11 @@ input[type="radio"] + label{
 #region-eleven:before{
     background-color: #9ab6d3;
 }
+/* Partners */
+.parnter-logo{
+    display: block;
+    margin-bottom: 15px;
+}
 /* ---------------------------------------
     Events
 --------------------------------------- */
