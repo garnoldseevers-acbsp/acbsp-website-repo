@@ -217,7 +217,7 @@ a:hover,
     text-transform: uppercase;
     width: auto;
     font-size: 16px;
-    background-color: #d0d0d0;
+    background-color: #6FD4E4;
     transition: all 250ms ease-in 0s;
     height: auto;
     line-height: 18px;
@@ -234,6 +234,12 @@ a:hover,
     font-size: 14px !important;
 }
 /* ---------------------------------------
+    Images
+--------------------------------------- */
+img{
+    max-width: 100%;
+}
+/* ---------------------------------------
     Forms
 --------------------------------------- */
 .CustomFormTable{
@@ -245,7 +251,9 @@ a:hover,
     margin-bottom: 20px;
 }
 .CustomFormTable th,
-.CustomFormTable td{
+.CustomFormTable td,
+form th,
+form td{
     display: block;
     width: 100%;
     margin: 0px;
@@ -261,7 +269,7 @@ input[type="text"], select, textarea{
     margin-bottom: 15px;
     border-style: solid;
     border-width: 1px;
-    border-color: #d0d0d0;
+    border-color: #6FD4E4;
     border-radius: 3px;
     padding: 10px 15px;
     line-height: 24px;
@@ -269,23 +277,23 @@ input[type="text"], select, textarea{
     color: #555555;
 }
 .infobox{
-    border-color: #d0d0d0;
+    border-color: #6FD4E4;
     color: #777777;
     background-color: #efefef;
 }
-.CustomFormTable label{
+label{
     width: 100% !important;
     font-weight: normal;
     color: #777777;
 }
-.CustomFormTable input[type="text"],
-.CustomFormTable select,
-.CustomFormTable textarea{
+input[type="text"],
+select,
+textarea{
     width: 100%;
     max-width: 500px;
     height: 44px;
     line-height: 24px;
-    border-color: #d0d0d0;
+    border-color: #6FD4E4;
     border-radius: 3px;
     padding: 10px 15px;
     background-color: #ffffff;
@@ -294,9 +302,9 @@ input[type="text"], select, textarea{
     outline-style: none;
     -webkit-appearance:none;
 }
-.CustomFormTable input[type="text"]:focus,
-.CustomFormTable select:focus,
-.CustomFormTable textarea:focus{
+input[type="text"]:focus,
+select:focus,
+textarea:focus{
     border-color: #0075b0;
     color: #0075b0;
     outline: none;
@@ -304,19 +312,19 @@ input[type="text"], select, textarea{
     outline-style: none;
     -webkit-appearance:none;
 }
-.CustomFormTable input[type="text"]{
+input[type="text"]{
     width: 100% !important;
 }
-.CustomFormTable select option{
+select option{
     padding: 5px 0px;
 }
-.CustomFormTable input[type="checkbox"],
-.CustomFormTable input[type="radio"]{
+input[type="checkbox"],
+input[type="radio"]{
     display: inline-block;
     width: auto;
 }
-.CustomFormTable input[type="checkbox"] + label,
-.CustomFormTable input[type="radio"] + label{
+input[type="checkbox"] + label,
+input[type="radio"] + label{
     display: inline-block;
     width: auto !important;
     font-weight: normal;
@@ -334,11 +342,11 @@ input[type="text"], select, textarea{
     line-height: 22px;
     border-style:  none;
     text-align: left;
-    color: #d0d0d0;
+    color: #6FD4E4;
     background-color: #ffffff;
 }
 #CustomFormPager div{
-    color: #d0d0d0;
+    color: #6FD4E4;
 }
 #CustomFormPager .current{
     color: #0075b0;
@@ -384,11 +392,11 @@ input[type="text"], select, textarea{
     line-height: 28px;
     border-style:  solid;
     border-width: 1px;
-    border-color: #d0d0d0;
+    border-color: #6FD4E4;
     border-radius: 100px;
     text-align: center;
     text-decoration: none;
-    color: #d0d0d0;
+    color: #6FD4E4;
 }
 /* ---------------------------------------
     Icons
@@ -638,7 +646,7 @@ input[type="text"], select, textarea{
 .content-section{
     border-top-style: solid;
     border-width: 1px;
-    border-color: #d0d0d0;
+    border-color: #6FD4E4;
     padding-top: 30px;
     padding-bottom: 0px;
 }
@@ -820,14 +828,14 @@ input[type="text"], select, textarea{
     text-align: center;
     margin-bottom: 30px;
 }
-.event-listing{
+.events-homepage-section .event-listing{
     position: relative;
     padding: 0px;
 }
-.event-listing img{
+.events-homepage-section .event-listing img{
     width: 100%;
 }
-.event-details{
+.events-homepage-section .event-details{
     display: block;
     position: absolute;
     bottom: 15px;
@@ -836,12 +844,12 @@ input[type="text"], select, textarea{
     color: #ffffff;
     background-color: rgba(0,117,176,0.85);
 }
-.event-name{
+.events-homepage-section .event-name{
     display: block;
     font-weight: bold;
     color: #ffffff;
 }
-.event-date{
+.events-homepage-section .event-date{
     display: block;
     font-weight: bold;
     color: #ffffff;
@@ -903,6 +911,77 @@ input[type="text"], select, textarea{
 .contact-detail{
     font-size: 14px;
     line-height: 18px;
+}
+/* ---------------------------------------
+    Events
+--------------------------------------- */
+.acbsp-event{
+    display: block;
+    max-width: 540px;
+    position: relative;
+    clear: both;
+    margin-bottom: 30px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #6FD4E4;
+    padding: 0px;
+}
+.acbsp-regional-event{
+    display: block;
+}
+.acbsp-event img{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.acbsp-event .acbsp-event-details{
+    display: block;
+    width: 70%;
+    margin-bottom: 30px;
+}
+.acbsp-event .acbsp-event-name{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.acbsp-event .acbsp-event-date{
+    display: block;
+    color: #777777;
+}
+.acbsp-event .acbsp-event-venue{
+    display: block;
+    color: #777777;
+}
+.acbsp-event .acbsp-event-location{
+    display: block;
+    color: #777777;
+}
+.event-sidebar .content-section:first-child{
+    border-top-style: none;
+    padding-top: 0px;
+
+}
+.acbsp-regional-event{
+    display: block;
+    margin-bottom: 30px;
+}
+.acbsp-regional-event .acbsp-event-name{
+    display: block;
+    font-weight: bold;
+}
+.acbsp-regional-event .acbsp-event-date{
+    display: block;
+    color: #777777;
+}
+.acbsp-regional-event .acbsp-event-location{
+    display: block;
+    color: #777777;
+}
+.acbsp-regional-event .fine-print{
+    display: block;
+    color: #777777;
+    padding-top: 5px;
 }
 /* ---------------------------------------
     Member Sign-In
@@ -1015,7 +1094,7 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
 .faq-item{
     border-bottom-style: solid;
     border-width: 1px;
-    border-color: #d0d0d0;
+    border-color: #6FD4E4;
     margin-bottom: 30px;
 }
 .faq-question{
@@ -1068,6 +1147,15 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         border-left: 10px solid #0075B0;
         border-right: 0px;
     }
+    /* Events */
+    .acbsp-event:last-child{
+        border-bottom-style: none;
+    }
+    .acbsp-event .primary-button{
+        position: absolute;
+        bottom: 30px;
+        right: 0px;
+    }
     /* Member Sign-In */
     #ctl00_PageContent_PageSummary{
         width: 60%;
@@ -1101,13 +1189,15 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         display: block;
         width: 100%;
     }
-    #footer-cta .secondary-button{
+    .secondary-button{
         display: block;
         width: 100%;
+        margin-bottom: 30px;
     }
-    #footer-cta .primary-button{
+    .primary-button{
         display: block;
         width: 100%;
+        margin-bottom: 30px;
     }
     .formbutton{
         display: block;
@@ -1179,7 +1269,7 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
     .navbar-nav li a{
         border-bottom-style: solid;
         border-width: 1px;
-        border-color: #d0d0d0;
+        border-color: #6FD4E4;
     }
     .navbar-nav li a[href="/page/join"]{
         padding: 0px 30px;
@@ -1191,7 +1281,7 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         padding-left: 25px !important;
         border-bottom-style: solid !important;
         border-width: 1px !important;
-        border-color: #d0d0d0 !important;
+        border-color: #6FD4E4 !important;
         background-color: #F0FAFC !important;
         color: #007481 !important;
     }
@@ -1282,6 +1372,7 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
     .homepage-section .secondary-button{
         width: 100%;
     }
+    /* Events */
     /* Member Sign-In */
     form[action="https://www.acbsp.org/login.aspx?returl="] #SpTitleBar{
         text-align: center;

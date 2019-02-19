@@ -18,7 +18,7 @@
 </style>
 <div id="sidebar">
     <div class="subnav-sidebar">
-        <a href="/page/contact-general">General Questions</a>
+        <a href="/general/?type=contact">General Questions</a>
         <a href="/page/contact-membership">Membership Questions</a>
         <a href="/page/contact-accreditation" class="current">Accreditation Questions</a>
         <a href="/page/contact-event">Event Questions</a>
@@ -115,6 +115,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function(){
+        $("input[type='submit']").attr("value","Send Message");
         move_contact_info();
     });
     window.onresize = function(){

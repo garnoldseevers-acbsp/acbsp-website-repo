@@ -5,8 +5,18 @@
     #sp-main{
         padding-top: 0px;
     }
+    br,
+    br[clear="all"]{
+        display: none;
+    }
+    b{
+        font-weight: normal;
+    }
+    .FormTable1 tr td{
+        padding: 0px;
+    }
     @media only screen and (min-width: 767px){
-        #CustomFormForm{
+        form[name="frmContactForm"]{
             float: left;
             width: 67% !important;
             padding-left: 3%;
@@ -18,7 +28,7 @@
 </style>
 <div id="sidebar">
     <div class="subnav-sidebar">
-        <a href="/page/contact-general" class="current">General Questions</a>
+        <a href="/general/?type=contact" class="current">General Questions</a>
         <a href="/page/contact-membership">Membership Questions</a>
         <a href="/page/contact-accreditation">Accreditation Questions</a>
         <a href="/page/contact-event">Event Questions</a>
@@ -116,6 +126,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         move_contact_info();
+        delete_optional_fields();
     });
     window.onresize = function(){
         move_contact_info();
@@ -126,5 +137,15 @@
         }else{
             $(".additional-contact-information").appendTo("#sidebar");
         }
+    }
+    function delete_optional_fields(){
+        $("form[name='frmContactForm'] tr:nth-child(9)").remove();
+        $("form[name='frmContactForm'] tr:nth-child(8)").remove();
+        $("form[name='frmContactForm'] tr:nth-child(7)").remove();
+        $("form[name='frmContactForm'] tr:nth-child(6)").remove();
+        $("form[name='frmContactForm'] tr:nth-child(5)").remove();
+        $("form[name='frmContactForm'] tr:nth-child(4)").remove();
+        $("form[name='frmContactForm'] tr:nth-child(3)").remove();
+        $("input[type='submit']").attr("value","Send Message");
     }
 </script>
