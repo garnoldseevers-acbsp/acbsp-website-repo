@@ -165,15 +165,14 @@ a:hover,
     color: #005596;
 }
 .small-link:after{
-    content: "";
+    content: url("https://www.acbsp.org/resource/resmgr/images/icon/icon-angle-right-12px.svg");
     display: block;
     float: right;
     margin-left: 7px;
-    margin-top: 7px;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 8px solid #0075b0;
-    padding: 0px;
+    margin-top: 1px;
+}
+li .small-link{
+    margin-bottom: 0px;
 }
 /* Form Buttons */
 #formpage_saveLnk{
@@ -212,7 +211,7 @@ a:hover,
 #formpage_prev a:hover{
     color: #ffffff;
 }
-#formpage_next::after{
+#formpage_next:after{
     display: none;
     content: "NEXT >>";    
     border-radius: 5px;
@@ -777,7 +776,7 @@ input[type="radio"] + label{
     font-weight: bold;
     color: #ffffff;
     padding: 20px 20px;
-    background-color: rgb(0,117,176,0.85);
+    background-color: rgba(0,117,176,0.85);
 }
 #feature-text .primary-button{
     margin-top: 20px;
@@ -1004,6 +1003,42 @@ input[type="radio"] + label{
     display: block;
     margin-bottom: 15px;
 }
+/* Leadership */
+.staff-member{
+
+}
+.staff-member-photo{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 99px;
+}
+.staff-member-name{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0075b0;
+}
+.staff-member-title{
+    display: block;
+    margin-bottom: 30px;
+    color: #555555;
+}
+.bod-member{
+    display: block;
+    margin-bottom: 30px;
+}
+.bod-member-title{
+    display: block;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.bod-member-name{
+    display: block;
+    font-size: 14px;
+    color: #777777;
+}
 /* ---------------------------------------
     Events
 --------------------------------------- */
@@ -1079,7 +1114,7 @@ input[type="radio"] + label{
     Member Sign-In
 --------------------------------------- */
 form[action="https://www.acbsp.org/login.aspx?returl="] #SpTitleBar{
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     padding-left: 0px;
 }
 form[action="https://www.acbsp.org/login.aspx?returl="] #SpContent_Container{
@@ -1281,12 +1316,14 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         display: block;
         width: 100%;
     }
-    .secondary-button{
+    .secondary-button,
+    #footer-cta .secondary-button{
         display: block;
         width: 100%;
         margin-bottom: 30px;
     }
-    .primary-button{
+    .primary-button,
+    #footer-cta .primary-button{
         display: block;
         width: 100%;
         margin-bottom: 30px;
@@ -1458,7 +1495,7 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         font-weight: bold;
         color: #ffffff;
         padding: 10px 20px;
-        background-color: rgb(0,117,176,0.85);
+        background-color: rgba(0,117,176,0.85);
     }
     /* Homepage Content */
     .homepage-section .secondary-button{
@@ -1468,7 +1505,8 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
     /* Member Sign-In */
     form[action="https://www.acbsp.org/login.aspx?returl="] #SpTitleBar{
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
+        margin-bottom: 15px;
     }
     form[action="https://www.acbsp.org/login.aspx?returl="] #ctl00_PageContent_MainLogin{
         width: 100%;
@@ -1478,6 +1516,15 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
     }
     form[action="https://www.acbsp.org/login.aspx?returl="] #ctl00_PageContent_SpacerPanel{
         display: none;
+    }
+    form[action="https://www.acbsp.org/login.aspx?returl="] #RegSocial{
+        padding-bottom: 15px;
+    }
+    form[action="https://www.acbsp.org/login.aspx?returl="] .FormTable1{
+        margin-top: 15px;
+    }
+    form[action="https://www.acbsp.org/login.aspx?returl="] input[type="text"]{
+        margin-bottom: 0px;
     }
 }
 /* ---------------------------------------
