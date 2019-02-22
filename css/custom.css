@@ -176,28 +176,39 @@ li .small-link{
 }
 /* Form Buttons */
 #formpage_saveLnk{
+    display: block;
     color: #ffffff;
 }
 #formpage_saveLnk a{
+    display: block;
+    text-align: center;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px; 
     border-color: #f47d30;
-    padding: 10px 25px;
+    padding: 14px 25px;
     color: #f47d30;
 }
 #formpage_saveLnk a:hover{
     border-color: #0075b0;
     color: #0075b0;
-}#formpage_prev{
+}
+#formpage_prev{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px; 
     border-color: #f47d30;
-    padding: 10px 25px;
+    padding: 14px 25px;
     color: #f47d30;
 }
+#formpage_prev #sOr{
+    display: none !important;
+}
 #formpage_prev a{
+    display: inline-block;
     color: #f47d30;
 }
 #formpage_prev:hover{
@@ -211,20 +222,27 @@ li .small-link{
 #formpage_prev a:hover{
     color: #ffffff;
 }
-#formpage_next:after{
-    display: none;
-    content: "NEXT >>";    
+#formpage_next{
+    display: block;
+    position: relative;
+    margin-bottom: 25px;
+}
+.formpage-next-disabled{
+    display: block;
+    border-style: none;  
     border-radius: 5px;
-    padding: 10px 25px;
+    padding: 10px 30px !important;
     text-align: center;
+    line-height: 30px;
+    font-family: "Open Sans Condensed";
+    font-size: 18px !important;
+    font-weight: bold !important;
     text-transform: uppercase;
-    width: auto;
-    font-size: 16px;
-    background-color: #6FD4E4;
-    transition: all 250ms ease-in 0s;
-    height: auto;
-    line-height: 18px;
+    color: #ffffff;
+    background-color: #d0d0d0;
     cursor: default;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 .zone-content-calendar .irailcontent{
     min-height:218px;
@@ -241,6 +259,40 @@ li .small-link{
 --------------------------------------- */
 img{
     max-width: 100%;
+}
+/* ---------------------------------------
+    Typography
+--------------------------------------- */
+.large-list-item{
+    margin-bottom: 50px;
+    padding: 0px 15px
+}
+.large-list-item .icon{
+    margin: 0 auto 15px auto;
+}
+.large-list-item h3,
+.large-list-item p{
+    text-align: center;
+}
+.quote:before{
+    content: "\"";
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    font-weight: bold;
+    font-family: "Open Sans Condensed", arial, sans-serif;
+    font-size: 80px;
+}
+.quote{
+    position: relative;
+    margin-bottom: 50px;
+    padding: 50px 60px 0px 60px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.quote-source{
+    padding: 0px 60px;
+    font-style: italic;
 }
 /* ---------------------------------------
     Forms
@@ -262,6 +314,9 @@ form td{
     margin: 0px;
     padding: 0px;
 }
+.CustomFormTable td{
+    position: relative;
+}
 label{
     display: block;
     margin-bottom: 5px;
@@ -282,12 +337,36 @@ input[type="text"], select, textarea{
 .infobox{
     border-color: #6FD4E4;
     color: #777777;
-    background-color: #efefef;
+    background-color: rgba(111,212,228,0.1);
+}
+.form-error-notification{
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    color: #ff0000;
+    font-size: 10px;
+    font-style: italic;
+    text-align: left;
+}
+.form-error-notification.checkbox-notification{
+    top: auto;
+    bottom: -20px;
+}
+#formpage_next .form-error-notification{
+    top: auto;
+    left: 0px;
+    bottom: -19px;
+    line-height: 16px;
+    text-align: center;
+    white-space: nowrap;
 }
 label{
     width: 100% !important;
     font-weight: normal;
     color: #777777;
+}
+#CustomFormForm th label{
+    max-width: 100%;
 }
 input[type="text"],
 select,
@@ -323,25 +402,71 @@ select option{
 }
 input[type="checkbox"],
 input[type="radio"]{
+    width: 20px;
+    height: 20px;
     display: inline-block;
-    width: auto;
+    border-color: #d0d0d0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
 }
 input[type="checkbox"] + label,
 input[type="radio"] + label{
     display: inline-block;
     width: auto !important;
+    margin-top: -6px;
     font-weight: normal;
+    line-height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+input[type="radio"]{
+    border-radius: 99px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked{
+    background-color: #b7bf34;
+}
+input[type="checkbox"]:checked{
+    background-image: url("https://www.acbsp.org/resource/resmgr/images/icon/icon-check.svg");
+    background-position: center;
+    background-size: 12px 9px;
+    background-repeat: no-repeat;
+}
+input[type="radio"]:checked{
+    background-image: url("https://www.acbsp.org/resource/resmgr/images/icon/icon-circle.svg");
+    background-position: center;
+    background-size: 9px 9px;
+    background-repeat: no-repeat;
+}
+input[type="checkbox"]:focus,
+input[type="radio"]:focus{
+    outline: none;
+}
+input[type="file"]{
+    margin-bottom: 30px;
 }
 /* ---------------------------------------
     Form Pagination
 --------------------------------------- */
+#CustomFormPager{
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 15px 0px;
+}
 #CustomFormPager div,
 #CustomFormPager .current,
 #CustomFormPager .invalid{
-    width: 150px;
+    width: 30px;
+    display: inline-block;
     height: 30px;
     position: relative;
-    margin-left: 45px;
+    margin: 0px 15px 0px 15px;
     line-height: 22px;
     border-style:  none;
     text-align: left;
@@ -350,6 +475,14 @@ input[type="radio"] + label{
 }
 #CustomFormPager div{
     color: #6FD4E4;
+}
+.CustomFormTable tr:after,
+#CFormErrors + .CustomFormTable tbody:after,
+.CustomFormTable:after,
+#CustomFormPager:after{
+    content: "";
+    display: block;
+    clear: both;
 }
 #CustomFormPager .current{
     color: #0075b0;
@@ -389,7 +522,7 @@ input[type="radio"] + label{
     display: block;
     position: absolute;
     top: 0px;
-    left: -45px;
+    left: 0px;
     width: 30px;
     height: 30px;
     line-height: 28px;
@@ -418,6 +551,12 @@ input[type="radio"] + label{
     display: inline;
     width: 25px;
     margin-top: -4px;
+}
+.icon .icon-number{
+    font-size: 30px;
+    font-family: "Open Sans Condensed";
+    font-weight: bold;
+    color: #ffffff;
 }
 /* ---------------------------------------
     Top Menu
@@ -579,6 +718,12 @@ input[type="radio"] + label{
     color: #ffffff;
     background-color: #4C9EC7;
 }
+.subnav-sidebar a.subnav-sublink{
+    display: none;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0px 10px 0px 30px;
+}
 .subnav-sidebar a:hover,
 .subnav-sidebar a.current{
     background-color: #0075b0;
@@ -650,8 +795,7 @@ input[type="radio"] + label{
     border-top-style: solid;
     border-width: 1px;
     border-color: #6FD4E4;
-    padding-top: 30px;
-    padding-bottom: 0px;
+    padding: 30px 15px 0px 15px;
 }
 .content-section:first-child{
     border-top-style: solid;
@@ -1040,6 +1184,18 @@ input[type="radio"] + label{
     color: #777777;
 }
 /* ---------------------------------------
+    Accreditation
+--------------------------------------- */
+.accreditation-type-list{
+    margin-bottom: 0px;
+}
+.accreditation-type-list h3{
+    margin-bottom: 5px;
+}
+.accreditation-type-list p{
+    margin-bottom: 10px;
+}
+/* ---------------------------------------
     Events
 --------------------------------------- */
 .acbsp-event{
@@ -1274,6 +1430,17 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         border-left: 10px solid #0075B0;
         border-right: 0px;
     }
+    .subnav-sidebar a.subnav-sublink{
+        display: block;
+    }
+    .large-list-item h3,
+    .large-list-item p{
+        text-align: left;
+    }
+    /* Accreditation */
+    .accreditation-type-list{
+        margin-bottom: 30px;
+    }
     /* Events */
     .acbsp-event:last-child{
         border-bottom-style: none;
@@ -1295,11 +1462,38 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
         width: 30%;
         float: right;
     }
+    /* Join Form */
+    #formpage_saveLnk{
+        display: inline-block;
+        float: left;
+        margin-right: 15px;
+    }
+    #formpage_saveLnk a{
+        display: inline-block;
+    }
+    #formpage_prev{
+        display: inline-block;
+        float: left;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+    #formpage_prev a{
+        display: block;
+    }
+    #formpage_next{
+        display: inline;
+    }
+    .formpage-next-disabled{
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    #formpage_next .form-error-notification {
+        bottom: -30px;
+    }
 }
 /* ---------------------------------------
     Mobile
 --------------------------------------- */
-
 @media only screen and (max-width: 767px){
     /* Body */
     body,
@@ -1525,6 +1719,14 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
     }
     form[action="https://www.acbsp.org/login.aspx?returl="] input[type="text"]{
         margin-bottom: 0px;
+    }
+}
+/* ---------------------------------------
+    Mobile YM Onerrides
+--------------------------------------- */
+@media only screen and (max-width: 480px){
+    #CustomFormForm th label{
+        max-width: 100%;
     }
 }
 /* ---------------------------------------
