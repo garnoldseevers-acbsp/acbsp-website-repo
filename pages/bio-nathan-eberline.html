@@ -1,0 +1,158 @@
+<style type="text/css">
+    #SpSubHead{
+        display: none;
+    }
+    #sp-main{
+        padding-top: 0px;
+    }
+    @media only screen and (min-width: 767px){
+        #sp-main{
+            padding-top: 30px;
+        }
+    }
+    .staff-member-photo { 
+        display: inline-block; 
+        width: 100px; 
+        margin-right: 5%; 
+        margin-bottom: 25px;
+        border-style: solid; 
+        border-width: 1px;
+        border-color: #d0d0d0; 
+        border-radius: 100%;
+    }
+</style>
+<div id="sidebar">
+    <div class="subnav-sidebar">
+        <a href="/general/?type=contact">General Questions</a>
+        <a href="/page/contact-membership">Membership Questions</a>
+        <a href="/page/contact-accreditation">Accreditation Questions</a>
+        <a href="/page/contact-event">Event Questions</a>
+    </div><!-- /.subnav-sidebar -->
+    <div class="additional-contact-information">
+        <div class="additional-contact-section">
+            <h3>
+                Contact us by Phone
+            </h3>
+            <div class="contact-item">
+                <div class="contact-title">
+                    U.S. World Headquarters
+                </div>
+                <div class="contact-detail">
+                    (913) 339-9356
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    European Office
+                </div>
+                <div class="contact-detail">
+                    +32 274124 26
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    Latin American Office
+                </div>
+                <div class="contact-detail">
+                    +51 999963742
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    China Office
+                </div>
+                <div class="contact-detail">
+                    +86-10-62568532/33
+                </div>
+            </div><!-- .contact-item -->
+        </div><!-- /.additional-contact-section -->
+        <div class="additional-contact-section">
+            <h3>
+                Contact us by Mail
+            </h3>
+            <div class="contact-item">
+                <div class="contact-title">
+                    U.S. World Headquarters
+                </div>
+                <div class="contact-detail">
+                    11520 West 119th Street<br/>
+                    Overland Park, KS 66213
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    European Office
+                </div>
+                <div class="contact-detail">
+                    Rue Abbé Cuypers, 3<br/>
+                    Brussels, 1040, Belgium
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    Latin American Office
+                </div>
+                <div class="contact-detail">
+                    1 Jr. Las Calandrias 151 -291<br/>
+                    Santa Anita – Lima 43 - Perú
+                </div>
+            </div><!-- .contact-item -->
+            <div class="contact-item">
+                <div class="contact-title">
+                    China Office
+                </div>
+                <div class="contact-detail">
+                </div>
+            </div><!-- .contact-item -->
+        </div><!-- /.additional-contact-section -->
+        <div class="additional-contact-section">
+            <a href="https://www.acbsp.org/page/departments">List of Staff &amp; Departments</a>
+        </div><!-- /.additional-contact-section -->
+    </div><!-- /.additional-contact-information -->
+</div><!-- /#contact-sidebar-->
+<div id="content-sidebar-page">
+    <h1>
+        Nathan Eberline
+    </h1>
+    <img src="/resource/resmgr/staffphotos/neberline_100x100.jpg" class="staff-member-photo" title="Nathan Eberline" alt="Nathan Eberline" />
+    <p>
+        Nathan Eberline is the Vice President of Operations for the Accreditation Council for Business Schools and Programs (ACBSP), since May 2018.
+    </p>
+    <p>
+        Before coming to ACBSP, Nathan served as the Associate Legislative Director and Legal Counsel for the Kansas Association of Counties (KAC), a non-profit that promotes excellence in government at the county level. His career focus has included public policy, government relations, and municipal law. He served member counties by counseling on best practices with an emphasis on legal responsibilities and political realities. Prior to joining KAC, Nathan worked on behalf of cities with the League of Kansas Municipalities.
+    </p>
+    <p>
+        Nathan has served on the board for the Kansas Bar Association’s Young Lawyer’s Section since 2010 and is currently Past President. Additionally, he serves on the board for the Kansas Enrichment Network, an organization devoted to improving out-of-school programing for children in Kansas. Nathan has also served as an elder at his church, Mill Creek Community Church in western Shawnee, Kansas since 2010.
+    </p>
+    <p>
+        His wife, Tara Eberline, is a partner with Foulston Siefkin’s Kansas City office. They have two daughters, Lydia and Grace. Nathan holds a J.D. from the University of Iowa.
+    </p>
+    <h3>
+        Tell us about your family, hobbies or interests.
+    </h3>
+    <p>
+        My wife, Tara, and I have lived in the Kansas City Metro since 2006. Her job brought us to Kansas, and the state quickly became home. We have two daughters, Lydia and Grace, who are seven and five, respectively. Tara and I spend most of our free time with Lydia and Grace - an incredible joy for us both. I also enjoy reading, movies, playing basketball, and running triathlons."
+    </p>
+    <h3>
+        What is the best career advice you’ve ever gotten?
+    </h3>
+    <p>
+        "My neighbor growing up was a judge. I asked him what I should study in college if I wanted to attend law school. He said it does not matter which field you select; just learn to write. He was undoubtedly correct, and his advice strengthened my resolve to consume dense British literature and political treatises during my formal education. His advice not only served as career advice, but shaped who I am and how I think."
+    </p>
+</div><!-- /#content-sidebar-page -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("input[type='submit']").attr("value","Send Message");
+        move_contact_info();
+    });
+    window.onresize = function(){
+        move_contact_info();
+    }
+    function move_contact_info(){
+        if(window.innerWidth <= 767){
+            $(".additional-contact-information").appendTo("#sp-content");
+        }else{
+            $(".additional-contact-information").appendTo("#sidebar");
+        }
+    }
+</script>

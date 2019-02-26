@@ -300,6 +300,47 @@ ul{
     padding: 0px 60px;
     font-style: italic;
 }
+.collapsed, 
+.expanded{
+    position: relative;
+    cursor: pointer;
+}
+.collapsed:hover, 
+.expanded:hover{
+    background-color: rgba(111,212,228,0.1)
+}
+.collapsed .collapsible{
+    display: block !important;
+}
+.collapsed .expandable{
+    display: none !important;
+}
+.expanded .expandable{
+    display: block !important;
+}
+.expanded .collapsible{
+    display: none !important;
+}
+.collapsed:after,
+.expanded:after{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    background-size: 16px 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.collapsed:after{
+    background-image: url(https://www.acbsp.org/resource/resmgr/images/icon/icon-angle-down.svg);
+}
+.expanded:after{
+    background-image: url(https://www.acbsp.org/resource/resmgr/images/icon/icon-angle-up.svg);
+}
 /* ---------------------------------------
     Forms
 --------------------------------------- */
@@ -943,7 +984,7 @@ a.subnav-sublink:before{
     min-width: 550px;
     position: absolute;
     right: 0px;
-    top: 70px;
+    top: 130px;
 }
 .feature-headline{
     display: block;
@@ -1272,36 +1313,6 @@ h3.pricing-price{
     font-size: 20px;
     color: #ffffff;
 }
-.collapsed .collapsible{
-    display: block !important;
-}
-.collapsed .expandable{
-    display: none !important;
-}
-.expanded .expandable{
-    display: block !important;
-}
-.expanded .collapsible{
-    display: none !important;
-}
-.expand-icon{
-    display: block;
-    width: 16px;
-    height: 10px;
-    position: absolute;
-    top: 28px;
-    left: 0px;
-    background-size: 16px 10px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
-}
-.collapsed .expand-icon{
-    background-image: url(https://www.acbsp.org/resource/resmgr/images/icon/icon-angle-down.svg);
-}
-.expanded .expand-icon{
-    background-image: url(https://www.acbsp.org/resource/resmgr/images/icon/icon-angle-up.svg);
-}
 .pricing-international-variant{
     display: none;
 }
@@ -1488,14 +1499,17 @@ form[action="https://www.acbsp.org/login.aspx?returl="] a[href="/general/registe
     border-bottom-style: solid;
     border-width: 1px;
     border-color: #6FD4E4;
-    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 30px;
 }
 .faq-question{
     margin-bottom: 15px;
+    font-size: 16px;
     font-weight: bold;
+    color: #0075b0;
 }
 .faq-answer{
-    padding-left: 15px;
 }
 /* ---------------------------------------
     Misc.
