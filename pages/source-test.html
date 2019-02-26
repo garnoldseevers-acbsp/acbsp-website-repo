@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fbe52127be","applicationID":"110202938","transactionName":"b1FaNUtUV0dWV0xYClYbbRNQGl5RWVFKUAkXV00STVpUGlZHSA==","queueTime":0,"applicationTime":501,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYOUVZbCRABVVFQBwMOVVw="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Important: include as high up as possible, but after sensitive tags such as X-UA-Compatible -->
+        <title>Apply for ACBSP Accreditation - Accreditation Council for Business Schools and Programs</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVZWN4');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta name="google-site-verification" content="fN6xHnXoqTpsXyZwJQ9mwL_gbx7rFQ7xKf61mAqku3c" />
+<meta name="norton-safeweb-site-verification" content="0b-giaa6tufr6879nryj8c06kdkq5tnpbd9a--gstiiuvdcuzd2436abgg-7h-dohxu-6nc7h115xkly64wc44i28r9bjjlj1gjfq074otyt3pexvbji1cmau09znzg1" />
+
+<link REL="SHORTCUT ICON" href="/resource/resmgr/favicon.ico">
+
+<!-- Import Google Fonts: Open Sans, Open Sans Condensed-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.0/addons/bootstrap/jquery.smartmenus.bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.ymaws.com/acbsp.site-ym.com/css/20180829/sp/combined_v952.css">
+        <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/container/assets/skins/sam/container.css">
+		<link rel="stylesheet" type="text/css" href="/global_graphics/skins/MemberCustomPageMenu/yuimenu.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="/global_inc/site_templates/YM-FX-02-A/ie.css"><![endif]-->
+		
+		<!--@@DG_PRINT_BASE_URL@@
+			IMPORTANT! DO NOT MOVE OR MODIFY -->
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/dragdrop/dragdrop-min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/container/container-min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/menu/menu-min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/json/json-min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <script type="text/javascript" src="https://cdn.ymaws.com/global/js/20180829/frontend/combined.js"></script>
+
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.0/jquery.smartmenus.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.0/addons/bootstrap/jquery.smartmenus.bootstrap.min.js"></script>
+		<script type="text/javascript" src="/global_inc/site_templates/js/AddTableLabels.js"></script>
+		<script type='text/javascript'>
+			var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-46507102-1'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']);_gaq.push(['YM._setAccount', 'UA-2449742-47'], ['YM._setDomainName', 'none'], ['YM._setAllowLinker', true], ['YM._trackPageview']);
+			(function() {
+		        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	            })();
+			</script>
+	
+		<script type="text/javascript">
+			addEventHandler_OnLoad(function(){CheckMultipartForms(true)});
+		
+			var m_pulse = new Pulse('2/26/2019 3:11:27 PM');
+			m_pulse.Start();
+		</script>
+	
+		
+	</head>
+
+
+<body id="PageBody" onunload="try{if(m_blnDoBodyUnload) Body_OnUnload();}catch(e){}">
+	<div class="toolbar-out">
+		<div class="container">
+			<div id="itoolbar_bg">
+				<div id="itoolbar" class="col-md-9 col-sm-9 text-right">
+					<a href="/?page=join">Join</a> | <a id="PrintPage" href="#" onclick="return false;" title="Print view will be available once the page has finished loading."><img src="/global_graphics/icons/print_bw.gif" border="0" height="16" width="16" style="margin:5px 5px 0 0;valign:bottom;" />Print Page</a><script type='text/javascript'>function PrintPageClickHandler(){this.handleEvent = createPrintPagePopup }PrintPage_OnClick = new PrintPageClickHandler(); addEventHandler_OnLoad(function(){ var element = document.getElementById("PrintPage"); if(element) { element.onclick = PrintPage_OnClick.handleEvent; element.title = "Print Page";} });</script> | <a href='/general/?type=CONTACT'>Contact Us</a> | <a href='/login.aspx'>Sign In</a>
+				</div>
+				<div id="isearch" class="col-md-3 col-sm-3">
+					<form id="QuickSearchForm" name="QuickSearchForm" action="/search/all.asp">
+ <div class="input-group">
+  <input id="QuickSearchForm_bst" class="form-control" type="text" name="bst" maxlength="50" placeholder="Enter search criteria..." />
+  <span class="input-group-btn">
+   <button class="btn btn-default" type="button" onclick="return QuickSearchForm_DoSubmit();"><i class="fa fa-search"></i></button>
+  </span>
+ </div>
+</form>
+<script type="text/javascript">
+function QuickSearchForm_DoSubmit()
+{
+		var QuickSearchForm = document.QuickSearchForm;
+     if(QuickSearchForm)
+     {
+			ClearDefaultValue(QuickSearchForm.bst);
+         QuickSearchForm.submit();
+     }
+		return false;
+}
+</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-out"> 
+		<div class="container">
+			<div id="header">
+				<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic:latin', 'Montserrat::latin'  ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  
+	<a id="logo" target="_parent" href="/"><img src="/graphics/logo.png"></a>
+
+			</div>
+		</div>
+	</div>
+	<div class="mainmenu-out">
+		<div class="container">
+			<div id="mainmenu">
+				<div class="navbar-header" role="navigation"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span class="sr-only">Toggle navigation</span><span class="mobile-menu pull-left">MENU</span><div class="mobile-icon pull-left mleft-10"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div></button></div><div class="collapse navbar-collapse navbar-ex1-collapse"><ul class="nav navbar-nav navbar-left"><li><a href="/page/about-who-we-are" >About</a></li><li><a href="/page/accreditation-overview" >Accreditation</a></li><li><a href="/page/membership-benefits" >Membership</a></li><li><a href="/page/events" >Events</a></li><li><a href="/general/?type=contact" >Contact</a></li><li><a href="/page/join" >Join</a></li></ul></div>
+			</div>
+		</div>
+	</div>
+	<div id="sp-main" class="container">
+		<div class="row">
+			<div id="left" class="col-sm-8">
+				<div id="sp-content">
+					<!--@@DG_PRINT_PAGE_BEGIN@@
+						IMPORTANT! DO NOT MOVE OR MODIFY -->
+
+					
+  <script type="text/javascript">var blnUseEngagement = false; </script> 
+  
+<script type="text/javascript" src="/global_inc/js/favorite.js"></script>
+
+
+<style type="text/css">
+	#tat_table {
+		z-index:99;
+	}
+	#FavoriteEditorTitle {
+		margin: 0;
+	}
+</style>
+<div class="yui-skin-sam">
+<div id="FavoriteOptsPanel" style="visibility:hidden;">
+	<div id="FavoriteOptsPanelBody" class="bd">
+		<div id="FormErrors" style="display:none">
+			<div class="infobox">
+				<ul id="FormErrorList" class="redalert"></ul>
+			</div><br>
+		</div>
+			<form id="FavoriteEditor" name="FavoriteEditor" onsubmit="return FavoriteEditor_Submit(this)" style="display:none; margin: 0 10px 0 10px;">
+			<input type="hidden" id="FavoriteID" name="FavoriteID" value="">
+			<input type="hidden" id="strFavoriteTypeID_FK" name="strFavoriteTypeID_FK" value="">
+			<input type="hidden" id="strFavoriteParameters" name="strFavoriteParameters" value="">
+			<input type="hidden" name="strCommand" value="">
+			<input type="hidden" id="blnFavoriteReload" value="">
+			<table border="0" cellspacing="12" cellpadding="0">
+				<tr>
+					<td align="center">
+            
+               <img src="/global_graphics/icons/star_32x32.gif" border="0" width="32" height="32">
+            
+              </td>
+					<td><h2 id="FavoriteEditorTitle">
+            
+               Edit This Favorite
+            
+              </h2></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" id="strTitle" name="strTitle" value="" size="40" maxlength="100" />
+					<INPUT TYPE="hidden" NAME="ERR_strTitle" VALUE="strTitle|Name|20|1||100">
+					</td>
+				</tr>
+				<tr>
+					<td>Category:</td>
+					<td>
+						<input type="text" id="strCategory" name="strCategory" value="" size="40" autocomplete="off" maxlength="100" />
+						<INPUT TYPE="hidden" NAME="ERR_strCategory" VALUE="strCategory|Category|20|0||100">
+					</td>
+				</tr>
+				<tr>
+					<td>Share:</td>
+					<td>
+						<input id="blnIsPrivate0" type="radio" value="0" name="blnIsPrivate"/><label for="blnIsPrivate0">Yes</label>
+						<input id="blnIsPrivate1" type="radio" value="1" name="blnIsPrivate"/><label for="blnIsPrivate1">No, Keep Private</label>
+						<INPUT TYPE="hidden" NAME="ERR_blnIsPrivate" VALUE="blnIsPrivate|Share -- Yes/No, Keep Private|20|1||0">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center" style="padding-top:10px;">
+						<input type="submit" id="FavoriteEditor_btnSubmit" value="Submit" class="formbutton"
+							onclick="return FavoriteEditor_btnSubmit_OnClick(this);">
+						<input type="button" value="Cancel" class="formbutton" 
+							onclick="YAHOO.container.FavoriteOpts.hide();">
+						<input type="submit" id="FavoriteEditor_btnDelete" value="Delete" class="formbutton" style="display:none;"
+							onclick="return FavoriteEditor_btnDelete_OnClick(this);">
+					</td>
+				</tr>
+			</table>
+			<input type="hidden" name="__ASPVIEWSTATE" value="c9acc5e146f293c1c4d7e95550671ec591fedeb4cd55b883da7b25c9e8a658e81f54e2df695b24c02471a986db032e9f9f1402b6ae7d7f11827bddf1e2418574c05f0cef03aee5411754a7bb3c56a931179d7284babfb5feeb64b3a79cfda044237dbad9935401dcc3d5d78a0dbe836c5ffe30455e00dfc8bc4e12e308a4cbc674acce">
+			</form>
+	</div>
+</div></div>
+
+
+
+<script type="text/javascript" src="/global_inc/js/hit_highlighter.js"></script>
+<script type="text/javascript">
+
+    function Window_OnLoad() {
+		highlightDtSearchTerms('CustomPageBody');
+		highlightDtSearchTerms('ResourceCollection');
+	}
+
+	addEventHandler_OnLoad(Window_OnLoad);
+</script>
+
+<style type="text/css">
+
+.ScoreControl
+{
+	display:block;
+	float:left;
+}
+</style>
+
+<table id="SpSubHead" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td id="SpTitleBar">
+Apply for ACBSP Accreditation
+	</td>
+</tr>
+
+
+</table>
+
+<table id="SpContent" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td id="SpContent_Container">
+
+		<script type="text/javascript" src="/global_inc/js/ContentScores.js"></script>
+
+	<div class="calloutbox" style="float:right; padding:2px 6px 2px 8px;"><a href="/admin/content/custom_page_edit.asp?id=787369">Edit This Page</a></div>
+	
+	<div id="CustomPageBody"><style type="text/css">
+    #SpSubHead {
+        display: none;
+    }
+
+    #sp-main {
+        padding-top: 0px;
+    }
+
+    @media only screen and (min-width: 767px) {
+        #sp-main {
+            padding-top: 30px;
+        }
+    }
+</style>
+<div id="sidebar">
+    <div class="subnav-sidebar">
+        <a href="/page/accreditation-overview">Benefits</a>
+        <a href="/page/accreditation-standards">Standards</a>
+        <a href="http://acbspsearch.org/">ACBSP Accredited Programs</a>
+        <a href="/page/accreditation-types">Types of Accreditation</a>
+        <a href="/page/accreditation-type-associate" class="subnav-sublink">Associate Degree</a>
+        <a href="/page/accreditation-type-graduate" class="subnav-sublink">Bacc/Graduate Degree</a>
+        <a href="/page/accreditation-type-certificate" class="subnav-sublink">Certificate Program</a>
+        <a href="/page/accreditation-type-accounting" class="subnav-sublink">Separate Accounting Program</a>
+        <a href="/page/accreditation-eligibility">Eligibility</a>
+        <a href="/page/accreditation-pricing">Process &amp; Pricing</a>
+        <a href="/page/accreditation-apply" class="current">Apply for Accreditation</a>
+    </div><!-- /.subnav-sidebar -->
+</div><!-- /#sidebar-->
+<div id="content-sidebar-page">
+    <h1>
+        Apply for ACBSP Accreditation
+    </h1>
+    <p>
+        ACBSP provides a set of standards and criteria to assist ACBSP member institutions in achieving excellence in business program education. Through a process of self-study, on-site visitation, and assessment, business units have the opportunity to demonstrate their commitment to serving students, other institutions, and industry.
+    </p>
+    <div class="content-section">
+        <h3>
+            Step 1 - Download and Fill out Candidacy Document
+        </h3>
+        <a href="http://www.acbsp.org/resource/collection/EB5F486D-441E-4156-9991-00D6C3A44ED1/Application_for_ACBSP_Candidacy_Status.docx" target="_blank" class="primary-button" style="margin-bottom: 30px;">Download Candidacy Document</a>
+    </div><!-- /.content-section -->
+    <div class="content-section">
+        <h3>
+            Step 2 - Submit your Candidacy Document
+        </h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <h4>
+                    Send via Post
+                </h4>
+                <p>
+                    ACBSP<br/>
+                    11520 West 119th Street<br/>
+                    Overland Park, KS 66213
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4" style="margin-bottom: 30px;">
+                <h4>
+                    Send via Email
+                </h4>
+                <a href="mailto:sparscale@acbsp.org">sparscale@acbsp.org</a>
+            </div>
+        </div>
+    </div><!-- /.content-section -->
+    <div class="content-section">
+        <h3>
+            Step 3 - Pay Candidacy Fees
+        </h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <h4>
+                    Send Check via Mail
+                </h4>
+                <p>
+                    ACBSP<br/>
+                    11520 West 119th Street<br/>
+                    Overland Park, KS 66213
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <h4>
+                    Pay Over the Phone
+                </h4>
+                <p>
+                    (913) 339-9356
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4" style="margin-bottom: 30px;">
+                <h4>
+                    Request a Wire Tansfer
+                </h4>
+                <a href="mailto:mary@acbsp.org">mary@acbsp.org</a>
+            </div>
+        </div>
+        <p class="fine-print" style="margin-bottom: 50px;">
+            Please allow up to 30 days for review of your application (though most will be processed sooner).
+        </p>
+    </div><!-- /.content-section -->
+    <div class="content-section">
+        <h3>
+            We’re here to help!
+        </h3>
+        <p>
+            If you have questions or require additional assistance, contact ACBSP at sparscale@acbsp.org or 913-339-9356.
+        </p>
+        <a href="https://www.acbsp.org/page/contact-accreditation" class="primary-button">Contact Our Accreditation Team</a>
+    </div><!-- /.content-section -->
+    
+</div></div>
+
+	<div id="ResourceCollection">
+		
+	
+	<script type="text/javascript">
+	function LaunchThis(sender, strURL)
+	{
+		window.open (strURL);	
+		return false;
+	}
+	
+	function NewCollection(Collection)
+	{
+		window.location = "/members/resource_collection_item_edit.asp?id=" + Collection + "&groupID=";
+		return false;
+	}
+	
+	function ModifyThis(Collection, ItemID)
+	{
+		window.location = "/members/resource_collection_item_edit.asp?id=" + Collection + "&groupID=&itemID=" + ItemID;
+		return false;
+	}
+	</script>
+
+	</div></td>
+</tr>
+</table><!--END SpContent-->
+
+
+<div id="PageBase_RaiseAlert" class="yui-skin-sam"></div>
+
+
+<div class="yui-skin-sam">
+<div id="ContextualHelp" style="visibility:hidden">
+	<div id="ContextualHelpHead" class="hd"></div>
+	<div id="ContextualHelpBody" class="bd"></div>
+</div>
+<div id="SpNavBarSub" style="visibility:hidden">
+	<div id="SpNavBarSubBody" class="bd"></div>
+</div></div>
+
+						<!--@@DG_PRINT_PAGE_END@@
+							IMPORTANT! DO NOT MOVE OR MODIFY -->
+			</div><!-- Close sp-content div -->
+		</div><!-- Close left div -->
+
+		<div id="right" class="col-sm-4 ptop-15">
+			<div class="content"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--></div>
+			
+				<div class="zone mbottom-15" id="login">
+					<div class="irailhead">Sign In</div>
+					<div class="irailcontent"><script language="javascript" type="text/javascript" src="/global_inc/js/jquery.data.js"></script><script language="javascript" type="text/javascript" src="/global_inc/js/jquery.watermark.min.js"></script><script type="text/javascript">
+                             $(document).ready(function () {
+                             $('.loginuser').watermark('Username');
+                             $('.loginpass').watermark('Password');});</script><form id='LoginForm' action='https://www.acbsp.org/Login.aspx?returl=' method='post'><a href="https://ws.ymaws.com/Ams/SocialOAuth/facebook?Continue=%2fAms%2fFinalizeLogin%2ffacebook%3fReturnUrl%3dhttps%253a%252f%252fwww.acbsp.org%252fsocial%252fconnect.aspx%26ClientID%3d25958%26UseReturnUrl%3dTrue" type="button" class="btn-connect facebook">
+        <span class="facebook-icon">
+            <img src="/global_graphics/facebook-icon.png"></i>
+        </span>
+        <span class="facebook-text">Login with Facebook</span>
+    </a><a href="https://ws.ymaws.com/Ams/SocialOAuth/linkedin?Continue=%2fAms%2fFinalizeLogin%2flinkedin%3fReturnUrl%3dhttps%253a%252f%252fwww.acbsp.org%252fsocial%252fconnect.aspx%26ClientID%3d25958%26UseReturnUrl%3dTrue" type="button" class="btn-connect linkedin">
+        <span class="linkedin-icon">
+            <img src="/global_graphics/linkedin-icon.png"></i>
+        </span>
+        <span class="linkedin-text">Login with LinkedIn</span>
+    </a><div class="or-option">
+    <span class="or-text">OR</span>
+</div><INPUT TYPE='hidden' NAME='ERR_u' VALUE='u|Username|20|1||0'><INPUT TYPE='hidden' NAME='ERR_p' VALUE='p|Password|20|1||0'><p><div id="LoginUserName"><input class="small loginuser" type="text" name="u" size="20" maxlength="255" value=""/></div><div id="LoginPassword"> <br/>
+                        <input class="small loginpass" type="password" name="p" size="20" maxlength="64" autocomplete="off"></div></p>
+                        <p id="RememberMe"><input id="FrontendControls_RememberMe"
+                            type="checkbox" name="rememberme" value="true" checked><label
+                            for="FrontendControls_RememberMe">Remember Me</label></p>
+                        <p id="LoginSubmit"><input type="submit" name="btn_submitLogin" value="Sign In" class="formbutton">
+							<img class="securesubmit" src="/global_graphics/icons/securesubmit.png" title="Secured with SSL encryption." /></p></form><div id="LoginForgot"><a href='/general/email_pass.asp'>Forgot your password?</a></div><div id="LoginRegister"><a href='/general/register_start.asp'>Haven't registered yet?</a></div></div>
+				</div>
+			
+				<div class="zone-content-news"><!--YMPSTITLE=UwB1AGIAcABhAGcAZQAgAC0AIABOAGUAdwBzACAAJgAgAFAAcgBlAHMAcwA=/YMPSTITLE--><!--
+<style>
+.zone-content-news {padding-bottom: 15px;}
+</style>
+<button type="button" style="
+width: 100%;
+background-color: #2476b8;
+height: 55px;
+"><a href="/findaprogram" style="
+color: white;
+">Find an Accredited Program</a></button>
+--></div>
+			
+				<div class="zone-content-calendar"><!--YMPSTITLE=UwB1AGIAcABhAGcAZQAgAC0AIABDAG8AbQBtAHUAbgBpAHQAeQAgAEMAYQBsAGUAbgBkAGEAcgA=/YMPSTITLE--><!--
+<style>
+.zone-content-calendar {
+    border-color: #f1f1f1;
+    border-width: 10px;
+    border-style: solid;
+}
+#twitter-widget-0 {
+    height:450px !important;
+}
+</style>
+<a class="twitter-timeline" href="https://twitter.com/ACBSPAccredited" data-widget-id="454327536617406464">Tweets by @ACBSPAccredited</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+--></div>
+			
+				<div class="zone-content-featured"><!--YMPSTITLE=UwB1AGIAcABhAGcAZQAgAC0AIABGAGUAYQB0AHUAcgBlAGQAIABNAGUAbQBiAGUAcgBzAA==/YMPSTITLE--></div>
+			
+				<div class="zone-content-surveys"><!--YMPSTITLE=UwB1AGIAcABhAGcAZQAgAC0AIABTAHUAcgB2AGUAeQBzAA==/YMPSTITLE--></div>
+			
+			<div class="content"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--></div>
+		</div>
+
+	</div> <!-- Close row div -->
+	<div class="clear"></div>
+</div> <!-- Close sp-main div -->
+<div class="bottomcontentarea-out">
+	<div class="container">
+		<div id="bottomcontentarea" class="mbottom-15"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--><div class="container">
+    <div class="row">
+        <div id="sponsors">
+            <div class="slider">
+                <h2>
+                    Our Corporate Partners
+                </h2>
+                <ul class="cor_part_slider">
+                    <!-- TEMPLATE FOR EACH IMAGE
+                    <li class="col-md-4"><a href="http://www.website.com" target="_blank" rel="noopener"><img src="http://acbsp.site-ym.comhttps://www.acbsp.org/resource/resmgr/Sponsors_Partners/livetext_h55px.jpg" alt="GROUP HERE"></a></li>
+                    -->
+                    <li class="col-lg-6 col-md-12 col-sm-12 display_slide">
+                        <a href="http://www.aicpa.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/AICPA.png" alt="AICPA">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12 display_slide">
+                        <a href="http://www.baldrigepe.org/alliance/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/baldrigeAlliance.png" alt="The Alliance for Performance Excellence">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12 display_slide">
+                        <a href="http://www.businessweek.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/BBW.png" alt="Bloomberg Businessweek">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.campuslabs.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/CampusLabs.png" alt="Campus Labs">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.capsim.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/capsim.png" alt="Capsim">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.carringtoncrisp.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/carringtoncrisp.png" alt="CarringtonCrisp">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.cengage.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/cengage.png" alt="Cengage Learning">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.ceeman.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/ceeman.png" alt="CEEMAN">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://cheainternational.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/ciqg.jpg" alt="CHEA International Quality Group">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://management.org.tw/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/chinesemanagementassociation.png" alt="Chinese Management Association">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://eduvantis.com/" target="_blank" rel="noopener" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/images/eduvantis.jpg" alt="Eduvantis"/>
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.ets.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/ETS.png" alt="ETS">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://enactus.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/enactus.png" alt="Enactus">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.financialanalyst.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/GAFM.jpg" alt="Global Academy of Financial Management International Board of Standards">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.imanet.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/IMA.png" alt="Institute of Management Accountants">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="https://www.interpretive.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/interpretivesimulations.png" alt="Interpretive Simulations">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://keystoneacademic.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/keystone.png" alt="Keystone Academic Solutions">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.cladea.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/CLADEA.png" alt="Latin American Council of Management Schools">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="https://www.midstatesgroup.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/MidstatesGroup.png" alt="Midstates Group">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="www.mycos.com.cn/En" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/mycsos-logo-web.jpg" alt="MyCOS">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.planningshop.com/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/planningshop.png" alt="PlanningShop">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.pmiteach.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/PMI.png" alt="Project Management Institute">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.unprme.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/PRME.jpg" alt="PRME - Principles for Responsible Management Education">
+                        </a>
+                    </li>
+                    <li class="col-lg-6 col-md-12 col-sm-12">
+                        <a href="http://www.worldstrides.org/" target="_blank" rel="noopener">
+                            <img src="https://www.acbsp.org/resource/resmgr/corpmem_carousel/worldstrides.png" alt="Worldstrides">
+                        </a>
+                    </li>
+                    <div class="clear">
+                    </div>
+                </ul>  
+            </div><!-- /.slider -->
+        </div><!-- /#sponsors -->
+    </div><!-- /.row -->
+</div><!-- /.container -->
+<script>
+    // initaialize  number of slides variable
+    var number_of_slides = 0;
+    // initaialize  current slide variable
+    var current_slide = 1;
+    // set number of slides to show at one time
+    var number_of_slides_to_show = 2;
+    // set duration that slides will be displayed in milliseconds
+    var pause_duration = 3000;
+    // on page load, do the following
+    $(document).ready(function(){
+        // count the total number of slides in the list
+        $(".cor_part_slider li").each(function(){
+            number_of_slides += 1;
+            // start on a random slide
+            current_slide = Math.floor(Math.random() * number_of_slides);
+        });
+        // advance to the next slide immediately
+        advance_slide();
+    });
+    function advance_slide(){ 
+        $(".display_slide").removeClass("display_slide");
+        // if  carousel reaches end, do the following
+        if(current_slide >= (number_of_slides + number_of_slides_to_show)){
+            // reset current slide to the beginning
+            current_slide = 1;
+            // advance to the next slide immediately
+            advance_slide();
+        // if list does not have enough items to fill the last slide
+        }else if(current_slide > number_of_slides - number_of_slides_to_show){
+            // determine how many slides remain in the list
+            var slides_left = number_of_slides - current_slide + 1;
+            // only display the remaining slides
+            for(i=0; i < slides_left; i ++){
+                $("li:nth-child(" + (current_slide + i) + ")").addClass("display_slide");
+            }
+            // reset current slide to the beginning
+            current_slide = 1;
+            // advance to the next slide after the provided pause duration
+            var pause_carousel = setTimeout(advance_slide, pause_duration);
+        // if  there are enough slides, display normal state
+        }else{
+            for(i=0; i < number_of_slides_to_show; i ++){
+                $("li:nth-child(" + (current_slide + i) + ")").addClass("display_slide");
+            }
+            // update current slide count
+            current_slide += number_of_slides_to_show;
+            // advance to the next slide after the provided pause duration
+            var pause_carousel = setTimeout(advance_slide, pause_duration);
+        }
+    }
+</script></div>
+	</div>
+</div>
+<div id="foot"><!--footer --></div>
+<div id="FooterContentArea">
+	<div class="container">
+		<!--YMPSTITLE=TgBBAA==/YMPSTITLE--><div id="footer">
+    <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 footer-link-column">
+            <h3>
+                Documents &amp; Reports
+            </h3>
+            <a href="https://www.acbsp.org/?page=decisions">Accreditation Decisions</a>
+            <a href="https://www.acbsp.org/page/outcomes_assessment">Outcomes Assesment</a>
+            <a target="_blank" href="https://cdn.ymaws.com/www.acbsp.org/resource/resmgr/files/acbsp_chea_12b_1_evidence_oc.pdf" target="_blank">Student Achievement</a>
+            <a href="https://www.acbsp.org/?page=accred_complaints">Public Concerns</a>
+            <a href="https://www.acbsp.org/privacy.aspx">Privacy Policy</a>
+            <a href="https://www.acbsp.org/page/termsofuse"> Terms of Use</a>
+        </div><!-- /.foot-col -->
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 footer-link-column">
+            <h3>
+                Members &amp; Partners
+            </h3>
+            <a href="https://www.acbsp.org/page/membership_list">Educational Members</a>
+            <a href="https://www.acbsp.org/page/corporate_members">Corporate Members</a>
+            <a href="https://www.acbsp.org/page/emeritus">Emeritus Members</a>
+            <a href="https://www.acbsp.org/page/search_accredited">Search Accredited Programs</a>
+        </div><!-- /.foot-col -->
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 footer-link-column">
+            <h3>
+                Corporate Partners
+            </h3>
+            <a href="https://www.acbsp.org/page/corporate_members">Advertise &amp; Sponsor</a>
+            <a target="_blank" href="http://careers.acbsp.org/" target="_blank">Job Boards</a>
+        </div><!-- /.foot-col -->
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 footer-link-column">
+            <h3>
+                Publications
+            </h3>
+            <a target="_blank" href="https://impact.acbsp.org/" target="_blank">ACBSP Impact</a>
+            <a target="_blank" href="http://bit.ly/1lpoW0n">The Transnational Journal of Business</a>
+        </div><!-- /.foot-col -->
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 footer-link-column">
+            <h3>
+                Media
+            </h3>
+            <a target="_blank" href="https://www.acbsp.org/news/">ACBSP News</a>
+            <a target="_blank" href="https://www.acbsp.org/page/media_kit">Press Kit</a>
+        </div><!-- /.foot-col -->
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 footer-link-column">
+            <h3>
+                Contact
+            </h3>
+            <a href="https://www.acbsp.org/page/contact-general">U.S. World Headquarters</a>
+            <a href="https://www.acbsp.org/page/europe">Europe</a>
+            <a href="https://www.acbsp.org/page/latinamerica">Latinoam&eacute;rica</a>
+            <a target="_blank" href="http://www.acbsp.cn/" target="_blank">中國 (China)</a>
+        </div><!-- /.foot-col -->
+    </div><!-- /.row -->
+    <div class="row" id="footer-bottom-row">
+        <div id="acbsp-copyright">
+            &copy; ACBSP. All Rights Reserved | Membership Software Powered by <a href="http://www.yourmembership.com/" target="_blank">YourMembership</a> | <a href="https://www.acbsp.org/ams/legal-privacy.htm">Legal</a>
+        </div>
+        <div class="foot-social">
+            <a target="_blank" href="http://www.facebook.com/acbsp"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a target="_blank" href="http://www.twitter.com/acbspaccredited"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a target="_blank" href="http://www.acbsp.org/linkedin "><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a target="_blank" href="http://www.youtube.com/acbspaccreditation"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        </div>
+        <div class="clear">
+        </div>
+    </div><!-- /.row -->
+</div><!-- /#footer -->
+	</div>
+</div>
+<div id="icopyright">
+	<div id="copyright-inner" class="container">
+		Membership Software Powered by <a href='http://www.yourmembership.com/'>YourMembership</a> &nbsp;::&nbsp; <a href='/ams/legal-privacy.htm'>Legal</a><!-- Copyright (c) 1998-2019 YourMembership.com Inc. All Rights Reserved. Copyright: Certain elements of this website are: Copyright (c) 1998-2019, YourMembership.com, Incorporated. YourMembership.com, Incorporated provides a limited license to use its Copyrights to the entity from whose web page you are viewing. Certain elements of this website may also be copyrighted by that entity; please see its Terms of Use or contact the organization for more information. General information about copyright laws can be found at: http://www.copyright.gov/. For more specific information, please consult an attorney. -->
+	</div>
+</div>
+<!-- HTML_5/YM-FX-02-A Footer -->
+
+<!-- BEGIN Yadmin Custom Script (placed here at the bottom of the <body> so that it does not interfere with any potential customer scripts within the <body>) -->
+
+<!-- END Yadmin Custom Script -->
+</body>
+<script>WriteAdminNavBar(true,false,'',true,'/admin/content/custom_page_edit.asp?id=787922');</script>
+
+</html>
+<!--END_OF_FILE-->
