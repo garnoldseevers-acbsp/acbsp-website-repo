@@ -1,0 +1,592 @@
+<style type="text/css">
+    #SpSubHead{
+        display: none;
+    }
+    #sp-main{
+        padding-top: 0px;
+    }
+    #region-map{
+        display: block;
+        margin: 0 auto;
+    }
+    .region-name:hover:after{
+        display: block;
+    }
+    .region-name{
+        display: block;
+        position: relative;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    .region-name:after{
+        content: "View Countries/States";
+        display: none;
+        position: absolute;
+        top: 1px;
+        left: 0px;
+        padding: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #d0d0d0;
+        border-radius: 3px;
+        color: #555555;
+        font-size: 10px;
+        line-height: 12px;
+        background-color: #efefef;
+    }
+    .region-area{
+        display: block;
+        margin-bottom: 5px;
+    }
+    .collapsed:after,
+    .expanded:after{
+        top: 0px;
+        right: auto;
+        left: -35px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #555555;
+        background: none;
+    }
+    .collapsed:after{
+        content: "+";
+    }
+    .expanded:after{
+        content: "-";
+        top: -2px;
+        left: -33px;
+    }
+    .collapsed:hover,
+    .expanded:hover{
+        background: none;
+    }
+    @media only screen and (min-width: 767px){
+        #sp-main{
+            padding-top: 30px;
+        }
+    }
+</style>
+<div id="sidebar">
+    <div class="subnav-sidebar">
+        <a href="/page/member-network-overview">Overview</a>
+        <a href="/page/member-network-regions" class="current">Regions</a>
+        <a href="/page/member-network-governance">Governance</a>
+        <a href="/page/member-network-committees">Committees</a>
+        <a href="/page/member-honor-societies">Honor Societies</a>
+        <a href="/page/member-network-evaluators-and-mentors">Evaluators &amp; Mentors</a>
+        <a href="http://careers.acbsp.org/" target="_blank">Career Center</a>
+        <a href="https://www.acbsp.org/members/dashboard.aspx" target="_blank">Online Forum</a>
+    </div><!-- /.subnav-sidebar -->
+</div><!-- /#sidebar-->
+<div id="content-sidebar-page">
+    <h1>
+        Our Regions
+    </h1>
+    <p>
+        Providing a regional forum to foster a better understanding of business education and for the exchange of ideas concerning collegiate business education programs, curriculum, and articulation among member institutions.
+    </p>
+    <p>
+        Assisting member institutions in their efforts to improve their professional business schools and programs and to assist them in their efforts to attain accreditation.
+    </p>
+    <p>
+        Providing ACBSP's Board of Directors with ideas and recommendations as to how the Council can better serve its membership.
+    </p>
+    <p>
+        Working with the ACBSP Board of Directors, President & CEO, and staff to achieve the goals and objectives of ACBSP.
+    </p>
+    <div class="content-section row">
+        <div class="row">
+            <div class="col-md-12 col-lg-8">
+                <h3>
+                    Connect With Your Region
+                </h3>
+                <p>
+                    For membership purposes, ACBSP is geographically divided into 11 regions. Each region has a set of officers selected from the members in that region. There are numerous ways members can get involved at the regional level. Visit the respective page for each region below for more details.
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <img src="/resource/resmgr/images/map-regions.png" id="region-map" alt="Map of Regions" />
+            </div>
+        </div><!-- /.row -->
+        <div class="row region-list">
+            <div class="col-md-6 col-lg-4">
+                <div class="region-list-item collapsed" id="region-one">
+                    <span class="region-name">
+                        U.S. (Northeast)
+                    </span>
+                    <span class="region-area expandable">
+                        Connecticut
+                    </span>
+                    <span class="region-area expandable">
+                        Maine
+                    </span>
+                    <span class="region-area expandable">
+                        Massachusetts
+                    </span>
+                    <span class="region-area expandable">
+                        New Hampshire
+                    </span>
+                    <span class="region-area expandable">
+                        New Jersey
+                    </span>
+                    <span class="region-area expandable">
+                        New York
+                    </span>
+                    <span class="region-area expandable">
+                        Puerto Rico
+                    </span>
+                    <span class="region-area expandable">
+                        Rhode Island
+                    </span>
+                    <span class="region-area expandable">
+                        Vermont
+                    </span>
+                    <span class="region-area expandable">
+                        U.S. Virgin Islands
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%201" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-two">
+                    <span class="region-name">
+                        U.S. (Eastern)
+                    </span>
+                    <span class="region-area expandable">
+                        Delaware
+                    </span>
+                    <span class="region-area expandable">
+                        District of Columbia
+                    </span>
+                    <span class="region-area expandable">
+                        Maryland
+                    </span>
+                    <span class="region-area expandable">
+                        Pennsylvania
+                    </span>
+                    <span class="region-area expandable">
+                        Virginia
+                    </span>
+                    <span class="region-area expandable">
+                        West Virginia
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%202" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-three">
+                    <span class="region-name">
+                        U.S. (Southeastern)
+                    </span>
+                    <span class="region-area expandable">
+                        Alabama
+                    </span>
+                    <span class="region-area expandable">
+                        Florida
+                    </span>
+                    <span class="region-area expandable">
+                        Georgia
+                    </span>
+                    <span class="region-area expandable">
+                        Kentucky
+                    </span>
+                    <span class="region-area expandable">
+                        Mississippi
+                    </span>
+                    <span class="region-area expandable">
+                        North Carolina
+                    </span>
+                    <span class="region-area expandable">
+                        South Carolina
+                    </span>
+                    <span class="region-area expandable">
+                        Tennessee
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%203" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-four">
+                    <span class="region-name">
+                        U.S. (Great Lakes)
+                    </span>
+                    <span class="region-area expandable">
+                        Illinois
+                    </span>
+                    <span class="region-area expandable">
+                        Indiana
+                    </span>
+                    <span class="region-area expandable">
+                        Michigan
+                    </span>
+                    <span class="region-area expandable">
+                        Minnesota
+                    </span>
+                    <span class="region-area expandable">
+                        Ohio
+                    </span>
+                    <span class="region-area expandable">
+                        Wisconsin
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%204" class="small-link">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="region-list-item collapsed" id="region-five">
+                    <span class="region-name">
+                        U.S. (Midwest)
+                    </span>
+                    <span class="region-area expandable">
+                        Iowa
+                    </span>
+                    <span class="region-area expandable">
+                        Kansas
+                    </span>
+                    <span class="region-area expandable">
+                        Missouri
+                    </span>
+                    <span class="region-area expandable">
+                        Nebraska
+                    </span>
+                    <span class="region-area expandable">
+                        North Dakota
+                    </span>
+                    <span class="region-area expandable">
+                        South Dakota
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%205" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-six">
+                    <span class="region-name">
+                        U.S. (Southwest)
+                    </span>
+                    <span class="region-area expandable">
+                        Arkansas
+                    </span>
+                    <span class="region-area expandable">
+                        Louisiana
+                    </span>
+                    <span class="region-area expandable">
+                        New Mexico
+                    </span>
+                    <span class="region-area expandable">
+                        Oklahoma
+                    </span>
+                    <span class="region-area expandable">
+                        Texas
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%206" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-seven">
+                    <span class="region-name">
+                        U.S. (Western)
+                    </span>
+                    <span class="region-area expandable">
+                        Alaska
+                    </span>
+                    <span class="region-area expandable">
+                        Arizona
+                    </span>
+                    <span class="region-area expandable">
+                        California
+                    </span>
+                    <span class="region-area expandable">
+                        Colorado
+                    </span>
+                    <span class="region-area expandable">
+                        Hawaii
+                    </span>
+                    <span class="region-area expandable">
+                        Idaho
+                    </span>
+                    <span class="region-area expandable">
+                        Montana
+                    </span>
+                    <span class="region-area expandable">
+                        Nevada
+                    </span>
+                    <span class="region-area expandable">
+                        Oregon
+                    </span>
+                    <span class="region-area expandable">
+                        Utah
+                    </span>
+                    <span class="region-area expandable">
+                        Washington
+                    </span>
+                    <span class="region-area expandable">
+                        Wyoming
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%207" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-eight">
+                    <span class="region-name">
+                        International
+                    </span>
+                    <span class="region-area expandable">
+                        Australia
+                    </span>
+                    <span class="region-area expandable">
+                        Austria
+                    </span>
+                    <span class="region-area expandable">
+                        Belgium
+                    </span>
+                    <span class="region-area expandable">
+                        China
+                    </span>
+                    <span class="region-area expandable">
+                        Cyprus
+                    </span>
+                    <span class="region-area expandable">
+                        Czech Republic
+                    </span>
+                    <span class="region-area expandable">
+                        France
+                    </span>
+                    <span class="region-area expandable">
+                        Germany
+                    </span>
+                    <span class="region-area expandable">
+                        Ghana
+                    </span>
+                    <span class="region-area expandable">
+                        Greece
+                    </span>
+                    <span class="region-area expandable">
+                        Hungary
+                    </span>
+                    <span class="region-area expandable">
+                        Italy
+                    </span>
+                    <span class="region-area expandable">
+                        Kazakhstan
+                    </span>
+                    <span class="region-area expandable">
+                        Kuwait
+                    </span>
+                    <span class="region-area expandable">
+                        Kyrgyz Republic
+                    </span>
+                    <span class="region-area expandable">
+                        Lebanon
+                    </span>
+                    <span class="region-area expandable">
+                        Luxembourg
+                    </span>
+                    <span class="region-area expandable">
+                        Mongolia
+                    </span>
+                    <span class="region-area expandable">
+                        Morocco
+                    </span>
+                    <span class="region-area expandable">
+                        Netherlands
+                    </span>
+                    <span class="region-area expandable">
+                        Nigeria
+                    </span>
+                    <span class="region-area expandable">
+                        Oman
+                    </span>
+                    <span class="region-area expandable">
+                        Palestine
+                    </span>
+                    <span class="region-area expandable">
+                        Qatar
+                    </span>
+                    <span class="region-area expandable">
+                        Romania
+                    </span>
+                    <span class="region-area expandable">
+                        Russia
+                    </span>
+                    <span class="region-area expandable">
+                        Saudi Arabia
+                    </span>
+                    <span class="region-area expandable">
+                        Slovak Republic
+                    </span>
+                    <span class="region-area expandable">
+                        Slovenia
+                    </span>
+                    <span class="region-area expandable">
+                        South Africa
+                    </span>
+                    <span class="region-area expandable">
+                        Spain
+                    </span>
+                    <span class="region-area expandable">
+                        Switzerland
+                    </span>
+                    <span class="region-area expandable">
+                        Turkey
+                    </span>
+                    <span class="region-area expandable">
+                        Turks and Caicos
+                    </span>
+                    <span class="region-area expandable">
+                        United Arab Emirates
+                    </span>
+                    <span class="region-area expandable">
+                        United Kingdom
+                    </span>
+                    <span class="region-area expandable">
+                        Former Yugoslav Republic of Macedonia
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%208" class="small-link">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="region-list-item collapsed" id="region-nine">
+                    <span class="region-name">
+                        Latin America
+                    </span>
+                    <span class="region-area expandable">
+                        Argentina
+                    </span>
+                    <span class="region-area expandable">
+                        Chile
+                    </span>
+                    <span class="region-area expandable">
+                        Colombia
+                    </span>
+                    <span class="region-area expandable">
+                        Curaçao
+                    </span>
+                    <span class="region-area expandable">
+                        Dominican Republic
+                    </span>
+                    <span class="region-area expandable">
+                        Ecuador
+                    </span>
+                    <span class="region-area expandable">
+                        El Salvador
+                    </span>
+                    <span class="region-area expandable">
+                        Guatemala
+                    </span>
+                    <span class="region-area expandable">
+                        Honduras
+                    </span>
+                    <span class="region-area expandable">
+                        Mexico
+                    </span>
+                    <span class="region-area expandable">
+                        Nicaragua
+                    </span>
+                    <span class="region-area expandable">
+                        Panama
+                    </span>
+                    <span class="region-area expandable">
+                        Paraguay
+                    </span>
+                    <span class="region-area expandable">
+                        Perú
+                    </span>
+                    <span class="region-area expandable">
+                        Suriname
+                    </span>
+                    <span class="region-area expandable">
+                        Trinidad and Tobago
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%209" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-ten">
+                    <span class="region-name">
+                        South Asia
+                    </span>
+                    <span class="region-area expandable">
+                        Afghanistan
+                    </span>
+                    <span class="region-area expandable">
+                        Bangladesh
+                    </span>
+                    <span class="region-area expandable">
+                        India
+                    </span>
+                    <span class="region-area expandable">
+                        Malaysia
+                    </span>
+                    <span class="region-area expandable">
+                        Singapore
+                    </span>
+                    <span class="region-area expandable">
+                        Thailand
+                    </span>
+                    <span class="region-area expandable">
+                        Vietnam
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%2010" class="small-link">Learn More</a>
+                </div>
+                <div class="region-list-item collapsed" id="region-eleven">
+                    <span class="region-name">
+                        Canada
+                    </span>
+                    <span class="region-area expandable">
+                        Alberta
+                    </span>
+                    <span class="region-area expandable">
+                        British Columbia
+                    </span>
+                    <span class="region-area expandable">
+                        Manitoba
+                    </span>
+                    <span class="region-area expandable">
+                        New Brunswick
+                    </span>
+                    <span class="region-area expandable">
+                        Newfoundland and Labrador
+                    </span>
+                    <span class="region-area expandable">
+                        Ontario
+                    </span>
+                    <a href="https://www.acbsp.org/group/region%2011" class="small-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section row">
+        <div class="content-section-text col-sm-12">
+            <h3>
+                Regional Documents
+            </h3>
+            <p>
+                Here are some documents that will be helpful as you interact with your region.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.acbsp.org/resource/collection/4D6C267C-7852-40AD-A14C-376F01469A7C/Regional_Council_Handbook.pdf" target="_blank" class="small-link">
+                        Regional Council Handbook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.acbsp.org/resource/collection/4D6C267C-7852-40AD-A14C-376F01469A7C/ACBSP_Activities-Timeline_Final.pdf" target="_blank" class="small-link">
+                        Timeline for Regional Treasurers
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.acbsp.org/resource/collection/4D6C267C-7852-40AD-A14C-376F01469A7C/ACBSP_Activities-PTimeline_Final.pdf" target="_blank" class="small-link">
+                        Timeline for Regional Presidents
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.acbsp.org/resource/collection/4D6C267C-7852-40AD-A14C-376F01469A7C/Conflict_of_Interest_Form.pdf" target="_blank" class="small-link">
+                        Conflict of Interest Form
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.acbsp.org/resource/collection/4D6C267C-7852-40AD-A14C-376F01469A7C/BEST_OF_REGIONS_PRESENTATION_RUBRIC.pdf" target="_blank" class="small-link">
+                        Best of the Regions Rubric
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.row -->
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".collapsed").live("click",function(){
+            $(this).removeClass("collapsed");
+            $(this).addClass("expanded");
+        });
+        $(".expanded").live("click",function(){
+            $(this).removeClass("expanded");
+            $(this).addClass("collapsed");
+        });
+    });
+</script>

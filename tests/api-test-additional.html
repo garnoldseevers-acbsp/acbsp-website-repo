@@ -1,0 +1,168 @@
+<style type="text/css">
+
+</style>
+<div id="test-fields">
+    <div class="user-field">
+        <label>First Name</label>
+        <p id="user_first_name">No Value</p>
+    </div>
+    <div class="user-field">
+        <label>Last Name</label>
+        <p id="user_last_name">No Value</p>
+    </div>
+</div>
+<div id="submit-test" class="primary-button">
+    Submit Test
+</div>
+<script type="text/javascript">
+    console.log("js");
+
+    // API Endpoint: https://api.yourmembership.com
+    // Public API Key: 7E372BDE-32DF-465E-848E-905DA78CB93C
+    // Private Key: C73D2FF6-4EA2-4759-B917-2BA6B25AFCB2
+    // Sa Passcode: dGz0s532dPhu
+
+    // XML URL = https://www.acbsp.org/resource/resmgr/xml/session-create.xml
+
+    // Create Session with Session.Create: https://api.yourmembership.com/reference/2_02/Session_Create.htm
+    // Create Authorization Token with AuthToken: https://api.yourmembership.com/reference/2_02/Auth_CreateToken.htm
+    // Redirect to New page with "RetURL" passed to AuthToken
+    // Retrieve Member Info with Member.Profile.Get: https://api.yourmembership.com/reference/2_02/Member_Profile_Get.htm
+
+    // Set up our HTTP request
+
+    var ym_api_key = "7E372BDE-32DF-465E-848E-905DA78CB93C";
+    var ym_private_api_key = "C73D2FF6-4EA2-4759-B917-2BA6B25AFCB2";
+    var ym_sa_passcode = "dGz0s532dPhu";
+    var ym_api_version = "2.30";
+    var redirect_url = "https://www.acbsp.org/members";
+    var proxy_server_url = "https://cors-anywhere.herokuapp.com/";
+    var ym_api_url = "https://api.yourmembership.com";
+    /* Add server proxy to head of api url in order to get around cors */
+    var api_url = proxy_server_url + ym_api_url;
+
+    $("#submit-test").live("click",function(){
+        create_session_js_formatted();
+    });
+    function create_session_js_formatted(){
+        var xml_create_session = '<?xml version="1.0" encoding="utf-8" ?>' + "\n" + "\n" +
+        '<YourMembership>' + "\n" +
+        '   <Version>' + ym_api_version + '</Version>' + "\n" +
+        '   <ApiKey>' + ym_api_key + '</ApiKey>' + "\n" +
+        '   <CallID>031</CallID>' + "\n" +
+        '   <Call Method="Session.Create"></Call>' + "\n" +
+        '</YourMembership>';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var session_id = xhttp.responseText.SessionID;
+                console.log(xml_create_session);
+                console.log(xhttp.responseText);
+                get_member_info(session_id);
+            }
+        };
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(xml_create_session,"text/xml");
+        xhttp.open("POST", api_url,true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(xmlDoc);  
+    }
+
+    function create_session_js_convert(){
+        var xml_create_session = '<?xml version="1.0" encoding="utf-8" ?>' +
+        '<YourMembership>' +
+        '   <Version>' + ym_api_version + '</Version>' +
+        '   <ApiKey>' + ym_api_key + '</ApiKey>' +
+        '   <CallID>001</CallID>' +
+        '   <Call Method="Session.Create"></Call>' +
+        '</YourMembership>';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var session_id = xhttp.responseText.SessionID;
+                console.log(xhttp.responseText);
+                get_member_info(session_id);
+            }
+        };
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(xml_create_session,"text/xml");
+        xhttp.open("POST", api_url,true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(xmlDoc);  
+    }
+
+    function create_session_vanilla_js(){
+        var xml_create_session = '<?xml version="1.0" encoding="utf-8" ?>' +
+        '<YourMembership>' +
+        '   <Version>' + ym_api_version + '</Version>' +
+        '   <ApiKey>' + ym_api_key + '</ApiKey>' +
+        '   <CallID>001</CallID>' +
+        '   <Call Method="Session.Create"></Call>' +
+        '</YourMembership>';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var session_id = xhttp.responseText.SessionID;
+                console.log(xhttp.responseText);
+                get_member_info(session_id);
+            }
+        };
+        xhttp.open("POST", api_url,true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(xml_create_session);  
+    }
+
+    function create_session_jquery(){
+        console.log("create_session()");
+        var xml_create_session = '<?xml version="1.0" encoding="utf-8" ?>' +
+        '<YourMembership>' +
+        '   <Version>' + ym_api_version + '</Version>' +
+        '   <ApiKey>' + ym_api_key + '</ApiKey>' +
+        '   <CallID>001</CallID>' +
+        '   <Call Method="Session.Create"></Call>' +
+        '</YourMembership>';
+        $.ajax({
+            url: api_url,
+            data: xml_create_session, 
+            type: 'POST',
+            contentType: "application/x-www-form-urlencoded",
+            dataType: "text",
+            success : function(response){
+                console.log("success");    
+                console.log(response);       
+                get_member_info(response.SessionID);
+            },
+            error : function (response, ajaxOptions, thrownError){  
+                console.log(response.status);          
+                console.log(thrownError);
+            } 
+        });
+    }
+
+
+    function get_member_info(session_id){
+        console.log("get_member_info(" + session_id + ")");
+        var xml_get_member_info = '<?xml version="1.0" encoding="utf-8" ?>' +
+        '<YourMembership>' +
+        '   <Version>' + ym_api_version + '</Version>' +
+        '   <ApiKey>' + ym_api_key + '</ApiKey>' +
+        '   <CallID>003</CallID>' +
+        '   <SessionID>' + session_id + '</SessionID>' +
+        '   <Call Method="Member.Profile.Get"></Call>' +
+        '</YourMembership>';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("user_first_name").innerHTML = this.responseText.FirstName;
+                document.getElementById("user_last_name").innerHTML = this.responseText.LastName;
+                /*
+                document.getElementById("desiredIDorClass").innerHTML = this.responseText.CustomFieldResponses.CustomFieldResponse.Values.Value;
+                */
+            }
+        };
+        xhttp.open("POST", api_url, true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(xml_get_member_info);  
+    }
+
+</script>

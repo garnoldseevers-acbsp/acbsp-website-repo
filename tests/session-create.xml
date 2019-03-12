@@ -1,0 +1,6 @@
+<YourMembership>
+    <Version>2.30</Version>
+    <ApiKey>7E372BDE-32DF-465E-848E-905DA78CB93C</ApiKey>
+    <CallID>031</CallID>
+    <Call Method="Session.Create"></Call>
+</YourMembership>

@@ -1,0 +1,680 @@
+<style type="text/css">
+    .cform_tooltip{
+        text-decoration: none;
+        text-decoration: none !important;
+    }
+    label.cform_tooltip span{
+        display: block;
+        width: auto;
+        position: static;
+        margin: 15px 0px 15px 0px;
+        padding: 0px;
+        text-decoration: none !important;
+        box-shadow: none;
+    }
+    label.cform_tooltip:hover span{
+        position: static;
+        border: none;
+        background: none;
+    }
+    .CustomFormTable th div, .CustomFormTable th span, .CustomFormResponseTable th div, .CustomFormResponseTable th span, .CustomFormResponseAttachmentsTable th span{
+        line-height: 24px;
+    }
+    #CustomFormForm{
+        margin: 0 auto;
+    }
+    td#SpContent_Container{
+        padding-right: 15px;
+    }
+    input[type="submit"]{
+        display: block;
+        width: auto;
+        max-width: 500px;
+    }
+    /* Infobox */
+    .infobox img:first-child{
+        display: none;
+    }
+    /* Hide Pagination Legend */
+    #CustomFormPagerLegend{
+        display: none;
+    }
+    /* Layout */
+    #SpTitleBar{
+        display: none;
+    }
+    #CFormErrors + .CustomFormTable{
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #6fd4e4;
+    }
+    .CustomFormTable tr{
+        margin-bottom: 0px;
+        border: none;
+    }
+    .CustomFormTable tbody:first-child{
+        display: block;
+        text-align: center;
+    }
+    /* Pagination */
+    #pagination0,
+    #pagination1,
+    #pagination2,
+    #pagination3,
+    #pagination4,
+    #pagination5,
+    #pagination0 a,
+    #pagination1 a,
+    #pagination2 a,
+    #pagination3 a,
+    #pagination4 a,
+    #pagination5 a,
+    #pagination0 a:after,
+    #pagination1 a:after,
+    #pagination2 a:after,
+    #pagination3 a:after,
+    #pagination4 a:after,
+    #pagination5 a:after,
+    #CustomFormPager div, 
+    #CustomFormPagerLegend div{
+        cursor: default !important;
+    }
+    /* Form Page */
+    #formpage0,
+    #formpage1,
+    #formpage2,
+    #formpage3{
+        margin-bottom: 50px;
+    }
+    /* Section Headers */
+    /* Section Headers - Set Size of all Section Headers */
+    #formpage0 tr:nth-child(1) th label{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555555;
+    }
+    #formpage1 tr:nth-child(1) th label{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555555;
+    }
+    #formpage2 tr:nth-child(1) th label{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555555;
+    }
+    #formpage3 tr:nth-child(1) th label{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555555;
+    }
+    #formpage4 tr:nth-child(1) th label{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555555;
+    }
+    #formpage5 tr:nth-child(1) th label{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555555;
+    }
+    /* Form Errors */
+    #CFormErrors{
+        display: none;
+    }
+    /* Validation CSS */
+    .field_visible{
+        display: block !important;
+    }
+    #formpage2 tr:nth-child(5),
+    #formpage2 tr:nth-child(6),
+    #formpage3 tr:nth-child(2),
+    #formpage3 tr:nth-child(3),
+    #formpage3 tr:nth-child(4),
+    #formpage3 tr:nth-child(5){
+        display: none;
+    }
+    #formpage5 label{
+        font-weight: bold;
+    }
+    @media only screen and (min-width: 767px){
+        .infobox{
+            width: 67%;
+            float: left;
+            margin: 0% 0% 20px 3%;
+        }
+        #CustomFormPager div a{
+            left: -45px;
+        }
+        input[type="text"]{
+            margin-bottom: 15px;
+        }
+        #CustomFormForm{
+            float: left;
+            width: 67% !important;
+            padding-left: 3%;
+        }
+        #sp-main{
+            padding-top: 30px;
+        }
+        /* Field Layout */
+        #formpage4 tr:nth-child(2){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(3){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(4){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(5){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(6){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(7){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(8){
+            width: 48%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(9){
+            width: 48%;
+            margin: 0% 1%;
+            margin-bottom: 75px;
+            float: left;
+        }
+        #formpage4 tr:nth-child(10){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(11){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(12){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(13){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(14){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(15){
+            width: 31%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(16){
+            width: 48%;
+            margin: 0% 1%;
+            float: left;
+        }
+        #formpage4 tr:nth-child(17){
+            width: 48%;
+            margin: 0% 1%;
+            margin-bottom: 50px;
+            float: left;
+        }
+    }
+</style>
+<div id="sidebar">
+    <div class="subnav-sidebar">
+        <a href="/page/accreditation-overview">Benefits</a>
+        <a href="/page/accreditation-standards">Standards</a>
+        <a href="http://acbspsearch.org/">ACBSP Accredited Programs</a>
+        <a href="/page/accreditation-types">Types of Accreditation</a>
+        <a href="/page/accreditation-type-associate" class="subnav-sublink">Associate Degree</a>
+        <a href="/page/accreditation-type-graduate" class="subnav-sublink">Bacc/Graduate Degree</a>
+        <a href="/page/accreditation-type-certificate" class="subnav-sublink">Certificate Program</a>
+        <a href="/page/accreditation-type-accounting" class="subnav-sublink">Separate Accounting Program</a>
+        <a href="/page/accreditation-eligibility">Eligibility</a>
+        <a href="/page/accreditation-pricing">Process &amp; Pricing</a>
+        <a href="/page/accreditation-apply" class="current">Apply for Accreditation</a>
+    </div><!-- /.subnav-sidebar -->
+</div><!-- /#sidebar-->
+<div id="content-sidebar-page">
+    <h1>
+        Apply for ACBSP Accreditation
+    </h1>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        /* Initialize Global Variables */
+        var current_page = 1;
+        var selected_country = "";
+        var number_of_campuses = "";
+        var selected_authority = "";
+        /* Initialization Functions */
+        initial_adjustments();
+        determine_selected_country();
+        determine_number_of_campuses();
+        determine_selected_authority();
+        check_if_fields_prefilled();
+        validate();
+        /* Event Listeners */
+        $("#formpage_nextBtn").live("click", function(){
+            validate();
+        });
+        $(".formpage-next-disabled").live("click", function(){
+            display_errors();
+        });
+        $("#formpage_prevBtn").live("click", function(){
+            enable_next();
+        });
+        $(".formpage-submit-disabled").live("click", function(){
+            validate();
+        });
+        $("[name='Custom_InstitutionLocation']").change(function(){
+            determine_selected_country();
+            validate();
+        });
+        $("[name='Custom_Howmanycampusesdoyouwishtoaccredit']").change(function(){
+            determine_number_of_campuses();
+            validate();
+        });
+        $("[name='Custom_Eligibiltiy']").change(function(){
+            determine_selected_authority();
+            validate();
+        });
+        $("[type='text'], textarea").keyup(function(){
+            if( !$(this).val() ){
+                $(this).css("border-color","#d0d0d0");
+                $(this).css("color","#555555");
+            }else{
+                $(this).css("border-color","#b7bf34");
+                $(this).css("color","#b7bf34");
+                $(this).siblings(".form-error-notification").remove();
+            }
+            validate();
+        });
+        $("[type='file']").change(function(){
+            if( !$(this).val() ){
+                $(this).css("border-color","#d0d0d0");
+                $(this).css("color","#555555");
+            }else{
+                $(this).css("border-color","#b7bf34");
+                $(this).css("color","#b7bf34");
+                $(this).siblings(".form-error-notification").remove();
+            }
+            validate();
+        });
+        $("select").change(function(){
+            if( !$(this).val() ){
+                $(this).css("border-color","#d0d0d0");
+                $(this).css("color","#555555");
+            }else{
+                $(this).css("border-color","#b7bf34");
+                $(this).css("color","#b7bf34");
+                $(this).siblings(".form-error-notification").remove();
+            }
+            validate();
+        });
+        $("[type='checkbox'],[type='radio']").change(function(){
+            if( !$(this).prop("checked") ){
+                $(this).css("border-color","#d0d0d0");
+                $(this).siblings("[type='checkbox'],[type='radio']").css("border-color","#d0d0d0");
+            }else{
+                $(this).css("border-color","#b7bf34");
+                $(this).siblings("[type='checkbox'],[type='radio']").css("border-color","#b7bf34");
+                $(this).siblings(".form-error-notification").remove();
+            }
+            validate();
+        });
+        function initial_adjustments(){
+            $("#pagination0, #pagination1, #pagination2, #pagination3, #pagination4, #pagination5").attr("onclick","");
+            $("#formpage_nextBtn").attr("value","Next >");
+            $("#formpage_saveLnk a").html("Save Progress");
+            $("#formpage_prevBtn").html("< Previous");
+            $("#CFORM_2302069_Custom_ElectronicSignature_0").removeAttr("checked");
+        }
+        function check_if_fields_prefilled(){
+            $("[type='text'], select, textarea").each(function(){
+                if( !$(this).val() ){
+                    $(this).css("border-color","#d0d0d0");
+                    $(this).css("color","#555555");
+                }else{
+                    $(this).css("border-color","#b7bf34");
+                    $(this).css("color","#b7bf34");
+                }
+            });
+        }
+        function determine_current_page(){
+            /* Determine Current Page */
+            var page_one_visibility = $("#formpage0").attr("style");
+            var page_two_visibility = $("#formpage1").attr("style");
+            var page_three_visibility = $("#formpage2").attr("style");
+            var page_four_visibility = $("#formpage3").attr("style");
+            var page_five_visibility = $("#formpage4").attr("style");
+            var page_six_visibility = $("#formpage5").attr("style");
+            if( page_one_visibility != "display: none;"){
+                current_page = 1;
+            }
+            if( page_two_visibility != "display: none;"){
+                current_page = 2;
+            }
+            if( page_three_visibility != "display: none;"){
+                current_page = 3;
+            }
+            if( page_four_visibility != "display: none;"){
+                current_page = 4;
+            }
+            if( page_five_visibility != "display: none;"){
+                current_page = 5;
+            }
+            if( page_six_visibility != "display: none;"){
+                current_page = 6;
+            }
+        }
+        function determine_selected_country(){
+            selected_country = $("[name='Custom_InstitutionLocation']").val();
+            if(selected_country == "The United States of America"){
+                $("#CFORM_341408_Custom_WhichaccreditingbodyprovidesyourinstitutionscurrentRegionalAccreditation").parent().parent().addClass("field_visible");
+                $("#CFORM_341408_Custom_Eligibiltiy_0").parent().parent().removeClass("field_visible");("field_visible");
+                $("#CFORM_341408_Custom_GovernmentDocuments").parent().parent().removeClass("field_visible");
+                $("#CFORM_341408_Custom_DocumentationofGoodStanding").parent().parent().removeClass("field_visible");
+            }else if(selected_country == "Outside of the U.S."){
+                $("#CFORM_341408_Custom_WhichaccreditingbodyprovidesyourinstitutionscurrentRegionalAccreditation").parent().parent().removeClass("field_visible");
+                $("#CFORM_341408_Custom_Eligibiltiy_0").parent().parent().addClass("field_visible");
+            }else{
+
+            }
+        }
+        function determine_number_of_campuses(){
+            number_of_campuses = $("[name='Custom_Howmanycampusesdoyouwishtoaccredit']").val();
+            if(number_of_campuses == "Multiple"){
+                $("#Label_Custom_NameofBusinessSchoolDepartmentorProgram").parent().parent().removeClass("field_visible");
+                $("#Label_Custom_PleaselistallbranchcampusesseekingACBSPAccreditation").parent().parent().addClass("field_visible");
+            }else if(number_of_campuses == "Single"){
+                $("#Label_Custom_NameofBusinessSchoolDepartmentorProgram").parent().parent().addClass("field_visible");
+                $("#Label_Custom_PleaselistallbranchcampusesseekingACBSPAccreditation").parent().parent().removeClass("field_visible");
+            }else{
+
+            }
+        }
+        function determine_selected_authority(){
+            selected_authority = $("[name='Custom_Eligibiltiy']").val();
+            if(selected_authority == "Yes"){
+                $("#CFORM_341408_Custom_GovernmentDocuments").parent().parent().addClass("field_visible");
+                $("#CFORM_341408_Custom_DocumentationofGoodStanding").parent().parent().removeClass("field_visible");
+            }else if(selected_authority == "Yes"){
+                $("#CFORM_341408_Custom_GovernmentDocuments").parent().parent().removeClass("field_visible");
+                $("#CFORM_341408_Custom_DocumentationofGoodStanding").parent().parent().addClass("field_visible");
+            }else{
+
+            }
+        }
+        function validate(){
+            determine_current_page();
+            if(current_page == 1){
+                validate_page_one();
+            }
+            if(current_page == 2){
+                validate_page_two();
+            }
+            if(current_page == 3){
+                validate_page_three();
+            }
+            if(current_page == 4){
+                validate_page_four();
+            }
+            if(current_page == 5){
+                validate_page_five();
+            }
+            if(current_page == 6){
+                validate_page_six();
+            }
+        }
+        function validate_page_one(){
+            var page_one_valid = true;
+            $("#formpage0 input[type='text'], #formpage0 select, #formpage0 textarea").each(function(){
+                var current_field_value = $(this).val();
+                if(!current_field_value){
+                    page_one_valid = false;
+                }
+            });
+            if(page_one_valid == true){
+                enable_next();
+            }else{
+                disable_next();
+            }
+        }
+        function validate_page_two(){
+            var page_two_valid = true;
+            page_two_valid = validate_checkbox_or_radio("Custom_AccreditationType", "CFORM_341408_Custom_AccreditationType_0");
+            if(page_two_valid == true){
+                enable_next();
+            }else{
+                disable_next();
+            }
+        }
+        function validate_page_three(){
+            var page_three_valid = true;
+            if(!validate_checkbox_or_radio("Custom_Howmanycampusesdoyouwishtoaccredit", "CFORM_341408_Custom_Howmanycampusesdoyouwishtoaccredit_0")){
+                page_three_valid = false;
+            }
+            if(number_of_campuses == "Multiple"){
+                var fields_to_validate = [
+                    "#CFORM_341408_strEmployerName",
+                    "#CFORM_341408_Custom_InstitutionLocation",
+                    "#CFORM_341408_Custom_PleaselistallbranchcampusesseekingACBSPAccreditation"
+                ];
+                /* check for empty text, select and textareas */
+                $.each(fields_to_validate, function(index,value){
+                    var current_field_value = $(value).val();
+                    if(!current_field_value){
+                        page_three_valid = false;
+                    }
+                });
+            }else{
+                var fields_to_validate = [
+                    "#CFORM_341408_strEmployerName",
+                    "#CFORM_341408_Custom_InstitutionLocation",
+                    "#CFORM_341408_Custom_NameofBusinessSchoolDepartmentorProgram"
+                ];
+                /* check for empty text, select and textareas */
+                $.each(fields_to_validate, function(index,value){
+                    var current_field_value = $(value).val();
+                    if(!current_field_value){
+                        page_three_valid = false;
+                    }
+                });
+            }
+            if(page_three_valid == true){
+                enable_next();
+            }else{
+                disable_next();
+            }
+        }
+        function validate_page_four(){
+            var page_four_valid = true;
+            if(selected_country == "The United States of America"){
+                var fields_to_validate = [
+                    "#CFORM_341408_Custom_WhichaccreditingbodyprovidesyourinstitutionscurrentRegionalAccreditation"
+                ];
+                /* check for empty text, select and textareas */
+                $.each(fields_to_validate, function(index,value){
+                    var current_field_value = $(value).val();
+                    if(!current_field_value){
+                        page_four_valid = false;
+                    }
+                });
+            }else{
+                /* check for empty text, select and textareas */
+                if(!validate_checkbox_or_radio("Custom_Eligibiltiy", "CFORM_341408_Custom_Eligibiltiy_0")){
+                    page_four_valid = false;
+                }
+                if(selected_authority == "Yes"){
+                    var fields_to_validate = [
+                        "#CFORM_341408_Custom_GovernmentDocuments"
+                    ];
+                    $.each(fields_to_validate, function(index,value){
+                        var current_field_value = $(value).val();
+                        if(!current_field_value){
+                            page_four_valid = false;
+                        }
+                    });
+                }else{
+                    var fields_to_validate = [
+                        "#CFORM_341408_Custom_DocumentationofGoodStanding"
+                    ];
+                    $.each(fields_to_validate, function(index,value){
+                        var current_field_value = $(value).val();
+                        if(!current_field_value){
+                            page_four_valid = false;
+                        }
+                    });
+                }
+            }
+            if(page_four_valid == true){
+                enable_next();
+            }else{
+                disable_next();
+            }
+        }
+        function validate_page_five(){
+            var page_five_valid = true;
+            $("#formpage4 input[type='text'], #formpage4 select, #formpage4 textarea").each(function(){
+                var current_field_value = $(this).val();
+                if(!current_field_value){
+                    page_five_valid = false;
+                }
+            });
+            if(page_five_valid == true){
+                enable_next();
+            }else{
+                disable_next();
+            }
+        }
+        function validate_page_six(){
+            $("#formpage_next").css("display","none");
+            var page_six_valid = true;
+            if(!validate_checkbox_or_radio("Custom_Iconfirm", "CFORM_341408_Custom_Iconfirm_0")){
+                page_six_valid = false;
+            }
+            if(page_six_valid == true){
+                enable_submit();
+            }else{
+                disable_submit();
+            }
+        }
+        function display_errors(){
+            if($("#formpage_next").children(".form-error-notification").length <= 0){
+                $("#formpage_next").append('<span class="form-error-notification">Please complete all fields</span>');
+            }
+            if($("#CFormCaptchaSubmit").children(".form-error-notification").length <= 0){
+                $("#CFormCaptchaSubmit").append('<span class="form-error-notification">Please approve confirmation.</span>');
+            }
+            determine_current_page();
+            if(current_page == 1){
+                display_errors_empty_inputs(0);
+            }
+            if(current_page == 2){
+                display_errors_empty_inputs(1);
+                display_errors_checkbox_or_radio("Custom_AccreditationType","CFORM_341408_Custom_AccreditationType_0");
+            }
+            if(current_page == 3){
+                display_errors_empty_inputs(2);
+                display_errors_checkbox_or_radio("Custom_Howmanycampusesdoyouwishtoaccredit","CFORM_341408_Custom_Howmanycampusesdoyouwishtoaccredit_0");
+            }
+            if(current_page == 4){
+                display_errors_empty_inputs(3);
+            }
+            if(current_page == 5){
+                display_errors_empty_inputs(4);
+            }
+            if(current_page == 6){
+                display_errors_empty_inputs(5);
+            }
+        }
+        function display_errors_empty_inputs(formpage_number){
+            $("#formpage" + formpage_number + " input[type='text'], #formpage" + formpage_number + " input[type='file'], #formpage" + formpage_number + " select, #formpage" + formpage_number + " textarea").each(function(){
+                var current_field_value = $(this).val();
+                if(!current_field_value){
+                    $(this).css("border-color","#ff0000");
+                    if($(this).siblings(".form-error-notification").length <= 0){
+                        $(this).parent().append('<span class="form-error-notification">Required</span>');
+                    }
+                }
+            });
+        }
+        function validate_checkbox_or_radio(attr_name, css_id){
+            if ($("input[name='" + attr_name + "']:checked").length < 1) {
+                return false;
+            }else{
+                $("#" + css_id).siblings(".form-error-notification").remove();
+                return true;
+            }
+        }
+        function display_errors_checkbox_or_radio(attr_name, css_id){
+            if ($("input[name='" + attr_name + "']:checked").length < 1) {
+                $("input[name='" + attr_name + "']").css("border-color","#ff0000");
+                if($("#" + css_id).siblings(".form-error-notification").length <= 0){
+                    $("#" + css_id).parent().append('<span class="form-error-notification checkbox-notification">Required</span>');
+                }
+            }
+        }
+        function enable_next(){
+            $("#formpage_next").children(".form-error-notification").remove;
+            $(".formpage-next-disabled").css("display","none");
+            $("#formpage_next").css("display","inline-block");
+            $("#formpage_saveLnk").siblings(".formpage-next-disabled").remove();
+        }
+        function disable_next(){
+            $("#formpage_next").css("display","none");
+            if($("#formpage_saveLnk").parent().find(".formpage-next-disabled").length){
+                /* No Action */
+            }else{
+                $("#formpage_saveLnk").parent().append("<div class='formpage-next-disabled'>Next ></div>");
+            }
+        }
+        function enable_submit(){
+            $("#CFormCaptchaSubmit").children(".form-error-notification").remove;
+            $("#CFormCaptchaSubmit .formpage-next-disabled").css("display","none");
+            $("#CFormCaptchaSubmit .formbutton").css("display","inline-block");
+        }
+        function disable_submit(){
+            $("#CFormCaptchaSubmit .formbutton").css("display","none");
+            if($("#CFormCaptchaSubmit").find(".formpage-next-disabled").length){
+                /* No Action */
+            }else{
+                $("#CFormCaptchaSubmit").append('<div class="formpage-next-disabled">Submit</div>');
+            }
+            $("#CFormCaptchaSubmit").find(".formpage-next-disabled").css("display","inline-block");
+        }
+    });
+</script>

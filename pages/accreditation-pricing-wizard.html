@@ -6,7 +6,14 @@
     #sp-main {
         padding-top: 0px;
     }
-
+    #footer_cta{
+        border-top-style: none;
+    }
+    #accounting-program-pricing,
+    #certificate-program-pricing,
+    #no-accreditation-selected{
+        display: none;
+    }
     @media only screen and (min-width: 767px) {
         #sp-main {
             padding-top: 30px;
@@ -37,73 +44,414 @@
     </p>
     <div class="row">
         <div class="col-sm-12 col-md-6">
-            <label>
-                Campus Location
-            </label>
-            <select name="campus-location" id="campus-location">
-                <option value="us">
-                    United States of America
-                </option>
-                <option calue="not-us">
-                    Outside of the U.S.
-                </option>
-            </select>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <label>
+            <label class="label-bold">
                 Type of Accreditation
             </label>
-            <select name="campus-location" id="accreditation-type">
-                <option>
-                    Associate Degree
-                </option>
-                <option>
-                    Baccalaureate/Graduate Degree
-                </option>
-                <option>
+            <div class="accreditation-type">
+                <input type="checkbox" name="accreditation-type1" value="associate-degree" id="checkbox-associate-degree" checked/>
+                <label for="checkbox-associate-degree" class="checkbox-label">
+                    Associate/Bacc./Graduate Degree
+                </label>
+            </div>
+            <div class="accreditation-type">
+                <input type="checkbox" name="accreditation-type3" value="accounting-program" id="checkbox-accounting-program"/>
+                <label for="checkbox-accounting-program" class="checkbox-label">
                     Separate Accounting Program
-                </option>
-                <option>
+                </label>
+            </div>
+            <div class="accreditation-type">
+                <input type="checkbox" name="accreditation-type4" value="certificate-program" id="checkbox-certificate-program"/>
+                <label for="checkbox-certificate-program" class="checkbox-label">
                     Certificate Program
-                </option>
-            </select>
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <label class="label-bold">
+                Campus Location
+            </label>
+            <div class="accreditation-type">
+                <input type="radio" name="campus-location" value="us" id="location-us" checked>
+                <label for="location-us">
+                    United States of America
+                </label>
+            </div>
+            <div class="accreditation-type">
+                <input type="radio" name="campus-location" value="not-us" id="location-not-us">
+                <label for="location-not-us">
+                    Outside of the U.S.
+                </label>
+            </div>
         </div>
     </div>
-    <div class="pricing-section">
-        <div class="row pricing-year">
-            <h1>
-                1st Year
-            </h1>
-        </div><!-- /.pricing-year -->
-        <div class="row pricing-line-item collapsed">
+    <div class="accreditation-pricing-section" id="associate-bacc-degree-pricing">
+        <div class="pricing-section" id="first-year">
+            <div class="row pricing-year">
+                <h1>
+                    1st Year
+                </h1>
+            </div><!-- /.pricing-year -->
+            <div class="row pricing-line-item collapsed" id="become-an-acbsp-member">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Become an ACBSP Member
+                    </h3>
+                    <div class="explanation expandable">
+                        <ul>
+                            <li>
+                                Complete the ACBSP Member Application for educational membership. 
+                            </li>
+                            <li>
+                                Pay annual membership dues
+                            </li>
+                        </ul>
+                        <p>
+                            The accreditation is for programs offered at each campus. While the main campus can join as a member, when the accreditation process begins all branch campuses must join as members. The cost for membership dues for additional campuses is $1000 for each additional campus which will be charged to the main campus.
+                        </p>
+                        <p>
+                            Campuses located outside the United States must provide a certified translation of an official document from an appropriate government organization in your country stating recognition, accreditation, and/or your right to grant degrees.
+                        </p>
+                        <a href="/page/join" class="primary-button" style="margin-bottom: 20px;">
+                            Apply for Membership
+                        </a>
+                    </div>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price price-annual-dues-non-accredited">
+                        $2,000
+                    </h3>
+                    <span class="fine-print expandable">
+                        Non-Accredited Member Annual Dues
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="apply-for-accreditation-candidacy">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Apply for Accreditation Candidacy
+                    </h3>
+                    <p class="expandable">
+                        Completion of the application for candidacy starts the accreditation process. The accreditation fee is $2,500. The institution can pay half the accreditation fee now and the other half when they start the self-study or they can pay the fee in full.
+                    </p>
+                    <p class="expandable">
+                        Candidacy application fee may be paid upon joining as a member or any time after becoming a member.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price price-accreditation-fee-installment">
+                        $1,250
+                    </h3>
+                    <span class="fine-print expandable">
+                        installment 1 of 2
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="meet-with-your-assigned-mentor">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Meet with your Assigned Mentor
+                    </h3>
+                    <p class="expandable">
+                        The business school will complete a Preliminary Visit Questionnaire and send the response to their mentor. The candidate will develop an action plan, with assistance from their mentor, for meeting the accreditation standards and criteria and establish a timetable for carrying out the plan. A copy of the plan is provided to the Director of Accreditation at the ACBSP office. The cost assumes the mentor is located outside the country and can be subject to wide variations and significant cost savings if in-country.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price collapsible price-meet-with-mentor">
+                        $1,300
+                    </h3>
+                    <h3 class="pricing-price expandable price-mentor-honorarium">
+                        $500
+                    </h3>
+                    <span class="fine-print expandable">
+                        Estimated Mentor Honorarium
+                    </span>
+                    <h3 class="pricing-price expandable price-travel-costs">
+                        $800
+                    </h3>
+                    <span class="fine-print expandable">
+                        Estimated Travel Costs
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="accreditation-progress-report">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Accreditation Progress Report
+                    </h3>
+                    <p class="expandable">
+                        This brief survey allows us to ensure that your insitituion is receiving the highest level of attention and helps us keep your journey toward accreditation on track.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item pricing-total">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Estimated 1st Year Total
+                    </h3>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price" id="price-first-year-total">
+                        $4,550
+                    </h3>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+        </div><!-- /.pricing-section -->
+        <div class="pricing-section" id="second-year">
+            <div class="row pricing-year">
+                <h1>
+                    2nd Year
+                </h1>
+            </div><!-- /.pricing-year -->
+            <div class="row pricing-line-item collapsed">
+                <div class="col-xs-9 col-lg-10 pricing-li-description" id="annual-acbsp-membership-dues-two">
+                    <h3>
+                        Annual ACBSP Membership Dues
+                    </h3>
+                    <p class="expandable">
+                        Annual membership dues for members in the candidacy process and acccredited members are $2,600.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price price-annual-dues-accredited">
+                        $2,600
+                    </h3>
+                    <span class="fine-print expandable">
+                        Annual Dues
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="finalize-action-plan-with-your-mentor">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Finalize Action Plan with Your Mentor
+                    </h3>
+                    <p class="expandable">
+                        Finish work with the mentor to close the gaps in meeting the standards and criteria and possibly in initial stage of preparation of self-study.
+                    </p>
+                    <p class="expandable">
+                        For most schools this occurs at the Annual Conference to avoid a second travel expense, but not always. If travel is required for a second visit, travel expenses could be the same as first year.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price collapsible price-meet-with-mentor">
+                        $1,300
+                    </h3>
+                    <h3 class="pricing-price expandable price-mentor-honorarium">
+                        $500
+                    </h3>
+                    <span class="fine-print expandable">
+                        Estimated Mentor Honorarium
+                    </span>
+                    <h3 class="pricing-price expandable price-travel-costs">
+                        $800
+                    </h3>
+                    <span class="fine-print expandable">
+                        Estimated Travel Costs
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="final-installment-of-application-fee">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Final Installment of Application Fee
+                    </h3>
+                    <p class="expandable">
+                        The payment is due when the Intent to Submit a Self-Study for Initial ACBSP Accreditation is filed and may be the next year in some cases.
+                    </p>
+                    <p class="expandable">
+                        A self study can be submitted on or before January 15 or August 15 of any year and the visit conducted.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price price-accreditation-fee-installment">
+                        $1,250
+                    </h3>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="accreditation-progress-report-two">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Accreditation Progress Report
+                    </h3>
+                    <p class="expandable">
+                        This brief survey allows us to ensure that your insitituion is receiving the highest level of attention and helps us keep your journey toward accreditation on track.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item pricing-total">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Estimated 2nd Year Total
+                    </h3>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price" id="price-second-year-total">
+                        $5,150
+                    </h3>
+                </div><!-- /.pricing-li-cost -->
+            </div><!-- /.pricing-line-item -->
+            <div class="expand-icon">
+            </div>
+        </div><!-- /.pricing-section -->
+        <div class="pricing-section" id="third-year">
+            <div class="row pricing-year">
+                <h1>
+                    3rd Year
+                </h1>
+            </div><!-- /.pricing-year -->
+            <div class="row pricing-line-item collapsed" id="annual-acbsp-membership-dues-three">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Annual ACBSP Membership Dues
+                    </h3>
+                    <p class="expandable">
+                        Annual membership dues for members in the candidacy process and acccredited members are $2,600.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price price-annual-dues-accredited">
+                        $2,600
+                    </h3>
+                    <span class="fine-print expandable">
+                        Annual Dues
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="self-study-commences">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Self-Study Commences
+                    </h3>
+                    <p class="expandable">
+                        The business unit must be approved by the Director of Accreditation upon recommendation from the mentor before the business unit begins the self-study. The self-study should cover a full academic year (Fall & Spring).
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="accreditation-progress-report-three">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Accreditation Progress Report
+                    </h3>
+                    <p class="expandable">
+                        This brief survey allows us to ensure that your insitituion is receiving the highest level of attention and helps us keep your journey toward accreditation on track.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed" id="site-visit">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Site Visit
+                    </h3>
+                    <p class="expandable">
+                        An evaluation team is assigned soon after receiving the Intent to Submit a Self-Study for Initial ACBSP Accreditation. The school is asked if a team member may not be a good fit or if they feel there could be a conflict of interest. The estimated cost assumes a combination of site team members from the USA and from the country or adjoining countries. The site team files its report with ACBSP within two weeks after their visit. The cost for the team visit will be deducted from the $4,000 deposit. Any funds remaining will be returned to the school. Any required balance will be invoiced to the school.
+                    </p>
+                    <p class="expandable">
+                        For planning purposes, ACBSP recommends allocating between $5,000 and $9,000 for the evaluation team site visit. Site visit costs may fall below or exceed the amounts listed, depending on the institution’s location, geographic location of the site team members, and the number of campuses seeking accreditation within a school system. The accreditation staff can help with a more exact figure as you make your budget plans.
+                    </p>
+                    <p class="expandable">
+                        The business school being visited is responsible for reimbursing ACBSP for all of the costs of the team visit. ACBSP will pay each evaluator after they file an expense reimbursement claim with receipts attached ACBSP will then bill the business school for all of the costs incurred by the team. The deposit balance will be reconciled, and the institution will either receive a partial return of the site visit deposit or be invoiced in the amount by which actual costs exceed the $4,000 deposit.
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price collapsible price-site-visit">
+                        $4,000
+                    </h3>
+                    <h3 class="pricing-price expandable price-site-visit-deposit">
+                        $4,000
+                    </h3>
+                    <span class="fine-print expandable">
+                        Site Visit Deposit
+                    </span>
+                    <h3 class="pricing-price expandable price-honorarium-chair-and-mentors">
+                        $1,950
+                    </h3>
+                    <span class="fine-print expandable">
+                        Estimated Honoraria for Chair and <span id="site-visit-mentor-number">2</span> members - Included in Deposit
+                    </span>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item collapsed">
+                <div class="col-xs-9 col-lg-10 pricing-li-description" id="accreditation-decision">
+                    <h3>
+                        Accreditation Decision
+                    </h3>
+                    <p class="expandable">
+                        The Board of Commissioners reviews accreditation materials from institutions each November and April (twice a year). The accreditation decision by the Board of Commissioners is reported to the members. Accredited business schools and programs receive their accreditation certificates during the ACBSP Annual Conference in June at a special ceremony
+                    </p>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+            <div class="row pricing-line-item pricing-total">
+                <div class="col-xs-9 col-lg-10 pricing-li-description">
+                    <h3>
+                        Estimated 3rd Year Total
+                    </h3>
+                </div><!-- /.pricing-li-description -->
+                <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                    <h3 class="pricing-price" id="price-third-year-total">
+                        $8,550
+                    </h3>
+                </div><!-- /.pricing-li-cost -->
+                <div class="expand-icon">
+                </div>
+            </div><!-- /.pricing-line-item -->
+        </div><!-- /.pricing-section -->
+    </div><!-- associate-bacc-degree-pricing -->
+    <div class="accreditation-pricing-section" id="accounting-program-pricing">
+        <div class="row pricing-line-item expanded">
             <div class="col-xs-9 col-lg-10 pricing-li-description">
                 <h3>
-                    Become an ACBSP Member
+                    Become an Accredited ACBSP Member
                 </h3>
-                <ul class="expandable">
-                    <li>
-                        Complete the ACBSP Member Application for educational membership. 
-                    </li>
-                    <li>
-                        Pay annual membership dues
-                    </li>
-                </ul>
-                <p class="expandable">
-                    The accreditation is for programs offered at each campus. While the main campus can join as a member, when the accreditation process begins all branch campuses must join as members. The cost for membership dues for additional campuses is $1000 for each additional campus which will be charged to the main campus.
-                </p>
-                <p class="expandable">
-                    Campuses located outside the United States must provide a certified translation of an official document from an appropriate government organization in your country stating recognition, accreditation, and/or your right to grant degrees.
-                </p>
-                <a href="/page/join" class="primary-button expandable" style="margin-bottom: 20px;">
-                    Apply for Membership
-                </a>
+                <div class="explanation expandable">
+                    <p>
+                        ACBSP Associate/Bacc. Grad. Accreditation is prerequisite to pursuing Separate Accounting Program Accreditation.
+                    </p>
+                    <div class="primary-button" style="margin-bottom: 20px;" id="add-assoc-bacc-grad">
+                        Add Associate/Bacc. Grad Accreditation
+                    </div>
+                </div>
             </div><!-- /.pricing-li-description -->
             <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price">
-                    $2,000
-                </h3>
-                <span class="fine-print expandable">
-                    Non-Accredited Member Annual Dues
+                <span class="fine-print">
+                    PREREQUISITE
                 </span>
             </div><!-- /.pricing-li-cost -->
             <div class="expand-icon">
@@ -115,19 +463,13 @@
                     Apply for Accreditation Candidacy
                 </h3>
                 <p class="expandable">
-                    Completion of the application for candidacy starts the accreditation process. The accreditation fee is $2,500. The institution can pay half the accreditation fee now and the other half when they start the self-study or they can pay the fee in full.
-                </p>
-                <p class="expandable">
-                    Candidacy application fee may be paid upon joining as a member or any time after becoming a member.
+                    Completion of the application for candidacy starts the accreditation process.
                 </p>
             </div><!-- /.pricing-li-description -->
             <div class="col-xs-3 col-lg-2 pricing-li-cost">
                 <h3 class="pricing-price">
                     $1,250
                 </h3>
-                <span class="fine-print expandable">
-                    installment 1 of 2
-                </span>
             </div><!-- /.pricing-li-cost -->
             <div class="expand-icon">
             </div>
@@ -142,117 +484,8 @@
                 </p>
             </div><!-- /.pricing-li-description -->
             <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <div class="pricing-us-variant">
-                    <h3 class="pricing-price collapsible">
-                        $3,050
-                    </h3>
-                    <h3 class="pricing-price expandable">
-                        $500
-                    </h3>
-                    <span class="fine-print expandable">
-                        Estimated Mentor Honorarium
-                    </span>
-                    <h3 class="pricing-price expandable">
-                        $800
-                    </h3>
-                    <span class="fine-print expandable">
-                        Estimated Travel Costs
-                    </span>
-                </div>
-                <div class="pricing-international-variant">
-                    <h3 class="pricing-price collapsible">
-                        $3,050
-                    </h3>
-                    <h3 class="pricing-price expandable">
-                        $500
-                    </h3>
-                    <span class="fine-print expandable">
-                        Estimated Mentor Honorarium
-                    </span>
-                    <h3 class="pricing-price expandable">
-                        $2,550
-                    </h3>
-                    <span class="fine-print expandable">
-                        Estimated Travel Costs
-                    </span>
-                </div>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Accreditation Progress Report
-                </h3>
-                <p class="expandable">
-                    This brief survey allows us to ensure that your insitituion is receiving the highest level of attention and helps us keep your journey toward accreditation on track.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item pricing-total">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Estimated 1st Year Total
-                </h3>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price pricing-us-variant">
-                    $4,550
-                </h3>
-                <h3 class="pricing-price pricing-international-variant">
-                    $6,330
-                </h3>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-    </div><!-- /.pricing-section -->
-    <div class="pricing-section">
-        <div class="row pricing-year">
-            <h1>
-                2nd Year
-            </h1>
-        </div><!-- /.pricing-year -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Annual ACBSP Membership Dues
-                </h3>
-                <p class="expandable">
-                    Annual membership dues for members in the candidacy process and acccredited members are $2,600.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price">
-                    $2,600
-                </h3>
-                <span class="fine-print expandable">
-                    Annual Dues
-                </span>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Finalize Action Plan with Your Mentor
-                </h3>
-                <p class="expandable">
-                    Finish work with the mentor to close the gaps in meeting the standards and criteria and possibly in initial stage of preparation of self-study.
-                </p>
-                <p class="expandable">
-                    For most schools this occurs at the Annual Conference to avoid a second travel expense, but not always. If travel is required for a second visit, travel expenses could be the same as first year.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
                 <h3 class="pricing-price collapsible">
-                    $3,050
+                    $1,000
                 </h3>
                 <h3 class="pricing-price expandable">
                     $500
@@ -261,114 +494,11 @@
                     Estimated Mentor Honorarium
                 </span>
                 <h3 class="pricing-price expandable">
-                    $2,550
+                    $500
                 </h3>
                 <span class="fine-print expandable">
                     Estimated Travel Costs
                 </span>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Final Installment of Application Fee Due
-                </h3>
-                <p class="expandable">
-                    The payment is due when the Intent to Submit a Self-Study for Initial ACBSP Accreditation is filed and may be the next year in some cases.
-                </p>
-                <p class="expandable">
-                    A self study can be submitted on or before January 15 or August 15 of any year and the visit conducted.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price">
-                    $1,250
-                </h3>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Accreditation Progress Report
-                </h3>
-                <p class="expandable">
-                    This brief survey allows us to ensure that your insitituion is receiving the highest level of attention and helps us keep your journey toward accreditation on track.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item pricing-total">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Estimated 2nd Year Total
-                </h3>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price">
-                    $4,350
-                </h3>
-            </div><!-- /.pricing-li-cost -->
-        </div><!-- /.pricing-line-item -->
-        <div class="expand-icon">
-        </div>
-    </div><!-- /.pricing-section -->
-    <div class="pricing-section">
-        <div class="row pricing-year">
-            <h1>
-                3rd Year
-            </h1>
-        </div><!-- /.pricing-year -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Annual ACBSP Membership Dues
-                </h3>
-                <p class="expandable">
-                    Annual membership dues for members in the candidacy process and acccredited members are $2,600.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price">
-                    $2,600
-                </h3>
-                <span class="fine-print expandable">
-                    Annual Dues
-                </span>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Self-Study Commences
-                </h3>
-                <p class="expandable">
-                    The business unit must be approved by the Director of Accreditation upon recommendation from the mentor before the business unit begins the self-study. The self-study should cover a full academic year (Fall & Spring).
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Accreditation Progress Report
-                </h3>
-                <p class="expandable">
-                    This brief survey allows us to ensure that your insitituion is receiving the highest level of attention and helps us keep your journey toward accreditation on track.
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
             </div><!-- /.pricing-li-cost -->
             <div class="expand-icon">
             </div>
@@ -389,66 +519,21 @@
                 </p>
             </div><!-- /.pricing-li-description -->
             <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <div class="pricing-us-variant">
-                    <h3 class="pricing-price collapsible">
-                        $7,200
-                    </h3>
-                    <h3 class="pricing-price expandable">
-                        $4,000
-                    </h3>
-                    <span class="fine-print expandable">
-                        Site Visit Deposit
-                    </span>
-                    <h3 class="pricing-price expandable">
-                        $1,950
-                    </h3>
-                    <span class="fine-print expandable">
-                        Estimated Honoraria for Chair and 2 members
-                    </span>
-                    <h3 class="pricing-price expandable">
-                        $1,750
-                    </h3>
-                    <span class="fine-print expandable">
-                        Food and Lodging
-                    </span>
-                </div>
-                <div class="pricing-international-variant">
-                    <h3 class="pricing-price collapsible">
-                        $7,700
-                    </h3>
-                    <h3 class="pricing-price expandable">
-                        $4,000
-                    </h3>
-                    <span class="fine-print expandable">
-                        Site Visit Deposit
-                    </span>
-                    <h3 class="pricing-price expandable">
-                        $1,950
-                    </h3>
-                    <span class="fine-print expandable">
-                        Estimated Honoraria for Chair and 2 members
-                    </span>
-                    <h3 class="pricing-price expandable">
-                        $1,250
-                    </h3>
-                    <span class="fine-print expandable">
-                        Food and Lodging
-                    </span>
-                </div>
-            </div><!-- /.pricing-li-cost -->
-            <div class="expand-icon">
-            </div>
-        </div><!-- /.pricing-line-item -->
-        <div class="row pricing-line-item collapsed">
-            <div class="col-xs-9 col-lg-10 pricing-li-description">
-                <h3>
-                    Accreditation Decision
+                <h3 class="pricing-price collapsible">
+                    $4,000
                 </h3>
-                <p class="expandable">
-                    The Board of Commissioners reviews accreditation materials from institutions each November and April (twice a year). The accreditation decision by the Board of Commissioners is reported to the members. Accredited business schools and programs receive their accreditation certificates during the ACBSP Annual Conference in June at a special ceremony
-                </p>
-            </div><!-- /.pricing-li-description -->
-            <div class="col-xs-3 col-lg-2 pricing-li-cost">
+                <h3 class="pricing-price expandable">
+                    $4,000
+                </h3>
+                <span class="fine-print expandable">
+                    Site Visit Deposit
+                </span>
+                <h3 class="pricing-price expandable">
+                    $1,400
+                </h3>
+                <span class="fine-print expandable">
+                    Estimated Honoraria for Chair and 2 members Included in Deposit
+                </span>
             </div><!-- /.pricing-li-cost -->
             <div class="expand-icon">
             </div>
@@ -456,18 +541,34 @@
         <div class="row pricing-line-item pricing-total">
             <div class="col-xs-9 col-lg-10 pricing-li-description">
                 <h3>
-                    Estimated 3rd Year Total
+                    Estimated Total
                 </h3>
             </div><!-- /.pricing-li-description -->
             <div class="col-xs-3 col-lg-2 pricing-li-cost">
-                <h3 class="pricing-price">
-                    $7,300
+                <h3 class="pricing-price" id="price-first-year-total">
+                    $7,650
                 </h3>
             </div><!-- /.pricing-li-cost -->
             <div class="expand-icon">
             </div>
         </div><!-- /.pricing-line-item -->
-    </div><!-- /.pricing-section -->
+    </div><!-- separate-accounting-pricing -->
+    <div class="pricing-section accreditation-pricing-section" id="certificate-program-pricing">
+        <div class="row pricing-year">
+            <h1>
+                Contact Our Team
+            </h1>
+            <p>
+                Please contact our team for more information on Certificate Program Accreditation pricing.
+            </p>
+            <a href="/page/contact-accreditation" class="primary-button">Contact Our Team</a>
+        </div><!-- /.pricing-year -->
+    </div><!-- separate-accounting-pricing -->
+    <div class="pricing-section accreditation-pricing-section" id="no-accreditation-selected">
+        <h1>
+            No Accreditation Selected
+        </h1>
+    </div><!-- accreditation-pricing-section -->
     <div id="footer-cta" class="subpage">
         <h2>
             Take the Next Step Toward Accreditation
@@ -480,7 +581,35 @@
     </div><!-- /#cta-->
 </div>
 <script type="text/javascript">
+    /* Initialize Accreditation Variables */
+    var associate_graduate = true;
+    var accounting = false;
+    var certificate = false;
+    /* Initialize Location Variables */
+    var campus_location = "us";
+    /* Initialize Pricing Variables */
+    var annual_dues_non_accredited = 2000;
+    var annual_dues_accredited = 2600;
+    var accreditation_fee = 2500;
+    var accounting_application_fee = 1250;
+    var accreditation_fee_installment = accreditation_fee * 0.5;
+    var honorarium_mentor = 500;
+    var site_visit_mentor_number = 2;
+    var honorarium_site_visit_mentor = 550;
+    var honorarium_site_visit_chair = 850;
+    var travel_costs = 800;
+    var site_visit = 4000;
+    var site_visit_deposit = 4000;
+    var site_visit_honorarium = honorarium_site_visit_chair + (honorarium_site_visit_mentor * 2);
+
     $(document).ready(function(){
+        $("input[type='checkbox']").change(function(){
+            adjust_pricing();
+        });
+        $("input[name='campus-location']").change(function(){
+            campus_location = $(this).val();
+            adjust_pricing();
+        });
         $(".collapsed").live("click",function(){
             $(this).removeClass("collapsed");
             $(this).addClass("expanded");
@@ -489,15 +618,113 @@
             $(this).removeClass("expanded");
             $(this).addClass("collapsed");
         });
-        $("#campus-location").change(function(){
-            var campus_location = $(this).val();
-            if(campus_location == "us"){
-                $(".pricing-international-variant").css("display","none");
-                $(".pricing-us-variant").css("display","block");
-            }else{
-                $(".pricing-international-variant").css("display","block");
-                $(".pricing-us-variant").css("display","none");
-            }
+        $("#add-assoc-bacc-grad").live("click",function(){
+            $("#checkbox-associate-degree").attr("checked","checked");
+            adjust_pricing();
         });
     });
+
+    function adjust_pricing(){
+        if(campus_location == "us"){
+            travel_costs = 800;
+        }else{
+            travel_costs = 800 + 1800;
+        }
+        if($("#checkbox-associate-degree").is(":checked")){
+            associate_graduate = true;
+        }else{
+            associate_graduate = false;
+        }
+        if($("#checkbox-accounting-program").is(":checked")){
+            accounting = true;
+        }else{
+            accounting = false;
+        }
+        if($("#checkbox-certificate-program").is(":checked")){
+            certificate = true;
+        }else{
+            certificate = false;
+        }
+        if(associate_graduate == true && accounting == false && certificate == false){
+            accreditation_fee_installment = (accreditation_fee) * 0.5;
+            honorarium_chair = 850;
+            site_visit_mentor_number = 2;
+            site_visit_honorarium = honorarium_site_visit_chair + (honorarium_site_visit_mentor * site_visit_mentor_number);
+            display_associate_graduate_only();
+        }else if(associate_graduate == false && accounting == true && certificate == false){
+            display_accounting_only();
+        }else if(associate_graduate == false && accounting == false && certificate == true){
+            display_certificate_only();
+        }else if(associate_graduate == false && accounting == false && certificate == false){
+            display_no_accreditation_selected();
+        }else if(associate_graduate == true && accounting == true && certificate == false){
+            accreditation_fee_installment = (accreditation_fee + accounting_application_fee) * 0.5;
+            honorarium_chair = 1000;
+            site_visit_mentor_number = 3;
+            site_visit_honorarium = honorarium_site_visit_chair + (honorarium_site_visit_mentor * site_visit_mentor_number);
+            display_associate_graduate_only();
+        }else if(certificate == true){
+            display_certificate_only();
+        }
+        display_pricing();
+    }
+
+    function format_as_currency(amount){
+        return amount.toLocaleString('en-US',{style: "currency", currency: "USD", minimumFractionDigits: 0, maximumFractionDigits: 0});
+    }
+
+    function display_pricing(){
+        $(".price-annual-dues-non-accredited").html(format_as_currency(annual_dues_non_accredited));
+        highlight_price_change(".price-annual-dues-non-accredited");
+        $(".price-annual-dues-accredited").html(format_as_currency(annual_dues_accredited));
+        highlight_price_change(".price-annual-dues-accredited");
+        $(".price-accreditation-fee-installment").html(format_as_currency(accreditation_fee_installment));
+        highlight_price_change(".price-accreditation-fee-installment");
+        $(".price-meet-with-mentor").html(format_as_currency(honorarium_mentor + travel_costs));
+        highlight_price_change(".price-meet-with-mentor");
+        $(".price-mentor-honorarium").html(format_as_currency(honorarium_mentor));
+        highlight_price_change(".price-mentor-honorarium");
+        $(".price-travel-costs").html(format_as_currency(travel_costs));
+        highlight_price_change(".price-travel-costs");
+        $(".price-site-visit-deposit").html(format_as_currency(site_visit_deposit));
+        highlight_price_change(".price-site-visit-deposit");
+        $(".price-honorarium-chair-and-mentors").html(format_as_currency(site_visit_honorarium));
+        highlight_price_change(".price-honorarium-chair-and-mentors");
+        $("#site-visit-mentor-number").html(site_visit_mentor_number);
+        highlight_price_change("#site-visit-mentor-number");
+        $(".price-site-visit").html(format_as_currency(site_visit_deposit));
+        highlight_price_change(".price-site-visit");
+        $("#price-first-year-total").html(format_as_currency(annual_dues_non_accredited + accreditation_fee_installment + honorarium_mentor + travel_costs));
+        highlight_price_change("#price-first-year-total");
+        $("#price-second-year-total").html(format_as_currency(annual_dues_accredited + accreditation_fee_installment + honorarium_mentor + travel_costs));
+        highlight_price_change("#price-second-year-total");
+        $("#price-third-year-total").html(format_as_currency(annual_dues_accredited + site_visit_deposit + site_visit_honorarium));
+        highlight_price_change("#price-third-year-total");
+    }
+
+    function highlight_price_change(price){
+        $(price).css("color","#b7bf34");
+        if(price.includes("total")){
+            $(price).animate({color: "#ffffff"}, 500);
+        }else{
+            $(price).animate({color: "#0075b0"}, 500);
+        }
+    }
+
+    function display_associate_graduate_only(){
+        $(".accreditation-pricing-section").css("display","none");
+        $("#associate-bacc-degree-pricing").css("display","block");
+    }
+    function display_accounting_only(){
+        $(".accreditation-pricing-section").css("display","none");
+        $("#accounting-program-pricing").css("display","block");
+    }
+    function display_certificate_only(){
+        $(".accreditation-pricing-section").css("display","none");
+        $("#certificate-program-pricing").css("display","block");
+    }
+    function display_no_accreditation_selected(){
+        $(".accreditation-pricing-section").css("display","none");
+        $("#no-accreditation-selected").css("display","block");
+    }
 </script>
